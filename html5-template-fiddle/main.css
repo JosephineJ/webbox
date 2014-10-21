@@ -1,3 +1,11 @@
+/*Modifiers*/
+.center{
+	text-align: center;
+}
+/*Main Elements*/
+p, a, span, strong, li, input{	
+	font-family: Arial, sans-serif;
+}
 .nav{
 	display: block;
 	position: relative;
@@ -7,4 +15,17 @@
 	min-height: 120px;
 	top: 10px;
 	background-color: #f8f8f8;
+}
+.main-nav a{
+	color: #474747;
+	font-size: 14px;
+	line-height: 20px;
+	text-decoration: none;
+	display: inline-block;
+	padding: 52px;
+	background-color: #f3f3f3;
+}
+.main-nav a:hover{
+	color: #ffffff;
+	background-color: #dd0033;
 }
