@@ -1,0 +1,16 @@
+.c-theme .main-logo{
+background-color: hsla(66, 100%, 50%, 1);
+}
+.c-theme .main-menu{
+background-color: hsla(66, 100%, 50%, 1);
+}
+.c-theme .caput nav{
+background-color: hsla(66, 100%, 50%, 1);
+}
+.c-theme .nav-page.text-shown h2,  .c-theme .nav-page:hover h2{
+	color: hsla(306, 100%, 12%, 1);
+}
+.c-theme .main-menu a{
+	background-color: hsla(66, 100%, 50%, 1);
+	color: hsla(306, 100%, 12%, 1);
+}

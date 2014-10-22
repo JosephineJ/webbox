@@ -1,0 +1,183 @@
+
+/* SEPERATE */
+body {
+	width: 100%;
+}
+
+nav{
+	width: 25%;
+}
+
+nav p{
+	font-size: 14px;
+	font-style: italic;
+}
+
+.main-logo {
+	position: absolute;
+	float: left;
+	margin: 2%;
+	display: block;
+	width: 120px;
+	z-index: 5;
+	background-image: url('somethingsomething');
+	background-repeat: no-repeat;
+	background-attachment: scroll;
+	background-position: 0 center;
+	min-height: 80px;
+}
+
+
+/* SEPERATE CUSTOM */
+.block{
+	display: inline-block;
+	width: 0%;
+}
+
+.main-menu{
+	width: 8%;
+	height: 92vh; /*height: 82%; */
+	padding: 4vh;
+	position: absolute;
+	right: 0;
+	vertical-align: top;
+	z-index: 3;
+	
+}
+
+.main-menu a {
+	font-size: 16px;
+	line-height: 20px;
+	color: #c6c6ff;
+	text-align: left;
+	display: block;
+	padding: 0 3%;
+	height: 25%;
+	background-color: #f5f5f5;	
+}
+
+.canvas{
+	width: 100%;
+	display: block;
+	background-color: #f7f7f7;
+	height: 720px;
+	overflow: hidden;
+}
+.caput {
+	width: 100%;
+	position: absolute;
+	z-index: 1;
+}
+
+.caput nav {
+    margin: 3% 0 0 64%;
+    padding: 4%;
+    position: relative;
+    width: 24%;
+    background-color: hsla(20, 80%, 60%, 0.4);
+}
+
+.corpus {
+	background: url('') no-repeat scroll 0 0 #ff00ff;
+	width: 500%;
+	height: 100%;
+	position: relative;
+	left: 0;
+}
+
+.corpus .fudget{
+	float: left;
+	width: 20%;
+	height: 100%;
+	min-height: 240px;
+	position: relative;
+}
+
+.corpus .fudget-one{
+	background: #666666;
+}
+
+.corpus .fudget-two{
+	background: #999999;
+}
+
+.corpus .fudget-three{
+	background: #aaaaaa;
+}
+.corpus .fudget-four{
+	background: #cccccc;
+}
+.corpus .fudget-five{
+	background: #dddddd;
+}
+
+/* TEXT FORMATTING */
+
+h1, h2, h3, h4, p, a{
+   font-family: Arial, sans-serif;
+   font-weight: normal;
+   line-height: 1.6em;
+   color: #444444;
+   
+}
+
+h1 {
+	font-size: 32px;
+	font-weight: bold;
+	color: #e7e7e7;
+}
+
+
+/* CSS ANIMATION */
+.corpus.page0{	
+	left: 0;
+}
+.corpus.page1{	
+	left: -100%;
+}
+.corpus.page2{	
+	left: -200%;
+}
+.corpus.page3{	
+	left: -300%;
+}
+.corpus.page4{	
+	left: -400%;
+}
+.corpus{
+	transition: all 0.5s ease 0s;
+}
+.nav-page{
+	cursor:pointer;
+	transition: all 0.5s ease 0s;
+}
+.nav-page h2{
+	color: #444444;
+	font-weight: normal;
+}
+.nav-page p{
+	display: none;
+}
+.nav-page.text-shown h2, .nav-page:hover h2{
+	color: #f788aa;
+	font-weight: bold;
+	display: block;
+}
+.nav-page.text-shown p{
+	height: 100%;
+	display: block;
+}
+
+.canvas, .caput{
+	transition: width 0.5s ease 0s;
+}
+.canvas.flow-left, .caput.flow-left {
+	width: 0%;
+}
+
+
+
+
+
+
+

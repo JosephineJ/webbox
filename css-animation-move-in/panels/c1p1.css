@@ -1,0 +1,52 @@
+.corpus .fudget-one{
+	/*background-color: hsla(66,100%,86%,1);*/
+}
+.fudget-one .sky{
+	min-height: 480px;
+	position: relative;
+	background-color: hsla(66,100%,86%,1);
+	vertical-align: bottom;
+	border-radius: 7px;
+	transform: translate(-78px) rotate(24deg);
+    transform-origin: 72% 100%;
+}
+.fudget-one .char{
+	min-height: 320px;
+	width: 70px;
+	margin: 0 auto;
+	position: absolute;
+	background-color: hsla(23,100%,86%,1);
+	display: block;
+	top: 100px;
+	left: 50%;
+	border-radius: 7px;
+}
+.fudget-one .stardust{
+	height: 100%;
+	width: 100%;
+	top: 0;
+	left: 0;
+	position: absolute;
+	background-image: url('../../img/cells.png');
+	background-position: -20px -20px;
+	background-attachment: scroll;
+	background-repeat: no-repeat;
+	background-color: hsla(66,100%,100%,0.5);
+	vertical-align: bottom;
+	animation-duration: 60s;
+	animation-name: dusty;
+}
+
+/*CSS ANIMATIONS*/
+@keyframes dusty {
+  0% { background-position: -600px -20px;}
+
+  2% { background-position: -120px -20px;}
+  30% { background-position: -60px -20px;}
+  90% { background-position: -40px -20px;}
+  100% { background-position: -20px -20px;}
+}
+
+
+
+
