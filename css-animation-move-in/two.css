@@ -18,7 +18,7 @@
 	height: 0%;
 }
 .canvas, .caput, .caput *{
-	transition: all 0.5s ease 0s;
+	transition: all 1s ease 0s;
 }
 .canvas.flow-right{
 	height: 75%;

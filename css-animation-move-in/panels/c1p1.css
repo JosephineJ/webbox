@@ -11,15 +11,18 @@
     transform-origin: 72% 100%;
 }
 .fudget-one .char{
-	min-height: 320px;
-	width: 70px;
-	margin: 0 auto;
+	min-height: 600px;
+	width: 100%;
 	position: absolute;
-	background-color: hsla(23,100%,86%,1);
+	top: 0;
+	left: 0;
 	display: block;
-	top: 100px;
-	left: 50%;
-	border-radius: 7px;
+	background-image: url('k12.png');
+	background-color: transparent;
+	background-position: 33% 0;
+	background-attachment: scroll;
+	background-size: auto 600px;
+	background-repeat: no-repeat;
 }
 .fudget-one .stardust{
 	height: 100%;
@@ -27,24 +30,22 @@
 	top: 0;
 	left: 0;
 	position: absolute;
-	background-image: url('../../img/cells.png');
-	background-position: -20px -20px;
+	background-image: url('spacedust1400600.png');
+	background-position: -20px 0px;
 	background-attachment: scroll;
 	background-repeat: no-repeat;
-	background-color: hsla(66,100%,100%,0.5);
+	background-color: hsla(66,100%,100%,0);
 	vertical-align: bottom;
-	animation-duration: 60s;
+	animation-duration: 20s;
 	animation-name: dusty;
 }
 
 /*CSS ANIMATIONS*/
 @keyframes dusty {
-  0% { background-position: -600px -20px;}
-
-  2% { background-position: -120px -20px;}
-  30% { background-position: -60px -20px;}
-  90% { background-position: -40px -20px;}
-  100% { background-position: -20px -20px;}
+  0% { background-position: -800px  0px;}
+  30% { background-position: -60px 0px;}
+  90% { background-position: -40px 0px;}
+  100% { background-position: 0px  0px;}
 }
 
 
