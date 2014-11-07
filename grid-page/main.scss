@@ -1,0 +1,117 @@
+$color: #dd0033;
+$color2: #b2b2b2;
+$full: 1;
+$padding: 40px;
+$mwidth: 80%;
+$minwidth: 720px;
+$norm: 16px;
+$large: $norm*1.5;
+$giant: $norm*2.5;
+
+@mixin centermenu($width){
+	margin: 0 auto;
+	text-align: center;
+	width: $width;
+	min-width: $minwidth;
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+}
+
+@mixin fontz{
+
+		font-family: Arial, sans-serif;
+		font-weight: normal;
+		color: #444444;
+
+}
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+}
+
+@for $num from 1 through 5{
+	
+	h#{$num}{
+		@include fontz;
+		font-size: $large*2/$num;
+	}
+	
+}
+
+p, a, li, span {
+
+	@include fontz;
+
+}
+
+.main-nav{
+    
+    background-color: $color2;
+    margin-bottom: $padding/4;
+    width: 100%;
+    
+	a{
+	
+		padding: $padding/2 $padding;
+		color: $color;
+		background-color: $color2;
+		text-decoration: none;
+		
+		font: {
+		
+			size: 24px;
+			weight: normal;
+			family: Arial, sans-serif;
+		}
+		
+		&:hover{
+		
+			background-color: $color;
+			color: lighten($color, 80%);
+		}
+	}
+
+}
+
+
+
+section, .menu{
+	@include centermenu($mwidth);
+	background-color: $color2;
+	padding: $padding/2 $padding/4;
+}
+
+
+
+	
+
+@for  $num from 1 through 12{
+
+	.col-#{$num}{
+
+		width: percentage($full/$num);
+		float: left;
+		padding-right: $padding/2;
+		padding-left: $padding/2;
+		
+		&:last-of-type{
+			padding-right: 0;
+		}
+		&:first-of-type{
+			padding-left: 0;
+		}
+		
+	}
+
+}
