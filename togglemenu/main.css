@@ -1,0 +1,192 @@
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box; }
+
+body {
+  margin: 0;
+  background-color: #3f3e41; }
+
+h1 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 48px; }
+
+h2 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 24px; }
+
+h3 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 16px; }
+
+h4 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 12px; }
+
+h5 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white;
+  font-size: 9.6px; }
+
+p, a, li, span {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white; }
+
+.main-nav {
+  background-color: #0d0c0d;
+  margin-bottom: 10px;
+  width: 100%;
+  padding: 0 2%;
+  display: table;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column; }
+  @media screen and (min-width: 420px) {
+    .main-nav {
+      flex-direction: row; } }
+  .main-nav .nav-button {
+    background-color: #0d0c0d;
+    flex: 1;
+    /*width: $padding*3;*/
+    transition: background-color 0.2s; }
+    .main-nav .nav-button a {
+      color: #e1ff00;
+      text-decoration: none;
+      font-family: Century Gothic, sans-serif;
+      font-weight: normal;
+      color: white;
+      /*padding: $pad+4px ($s1)-10px;*/
+      /*on for undefined display*/
+      display: inline-block;
+      /*on for display block*/
+      width: 100%;
+      /*on for display block*/
+      line-height: 40px;
+      font-size: 20px; }
+      @media screen and (min-width: 420px) {
+        .main-nav .nav-button a {
+          font-size: 10px; } }
+      @media screen and (min-width: 820px) {
+        .main-nav .nav-button a {
+          font-size: 20px;
+          line-height: 80px; } }
+    .main-nav .nav-button:hover {
+      background-color: #e1ff00; }
+      .main-nav .nav-button:hover a {
+        color: #0d0c0d; }
+  .main-nav .chosen {
+    background-color: #e7ff33; }
+    .main-nav .chosen a {
+      color: #262527; }
+
+.clip {
+  background-color: #0d0c0d;
+  border-radius: 8px;
+  position: relative;
+  font-size: 0;
+  top: -20px;
+  left: 5px;
+  width: 26px;
+  padding: 10px;
+  cursor: pointer;
+  transition: all 0.2s; }
+  .clip:hover {
+    color: #e1ff00; }
+    .clip:hover:after {
+      border-top: 10px solid #e1ff00; }
+  .clip:after {
+    border-top: 8px solid white;
+    border-bottom: 8px solid transparent;
+    border-left: 8px solid transparent;
+    border-right: 8px solid transparent;
+    content: "";
+    display: inline-block;
+    position: relative;
+    top: 0;
+    left: 0;
+    background-color: transparent;
+    top: 9px;
+    left: -5px;
+    width: 5px;
+    height: 5px;
+    transition: -moz-transform 0.3s; }
+  .clip.roll-out {
+    top: -40px; }
+  .clip.roll-out:after {
+    -moz-transform: rotate(-180deg);
+    top: 0; }
+
+.clip.full {
+  width: 120px;
+  padding: 12px 20px 10px 20px;
+  left: 10px;
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: white; }
+
+section {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  /*min-width: $minwidth;*/
+  background-color: #0d0c0d;
+  padding: 20px 10px; }
+  section:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+.menu {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%;
+  /*min-width: $minwidth;*/
+  background-color: #0d0c0d;
+  padding: 0 10px;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  list-style: none; }
+  .menu:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (min-width: 420px) {
+    .menu {
+      flex-direction: row; } }
+
+.popupbox {
+  margin: 0 auto;
+  text-align: center;
+  width: 480px;
+  /*min-width: $minwidth;*/
+  background-color: #e1ff00;
+  position: absolute;
+  top: 80px;
+  left: 53.33333%;
+  padding: 40px;
+  text-align: center;
+  border-radius: 4px; }
+  .popupbox:after {
+    content: "";
+    display: table;
+    clear: both; }
+  .popupbox input, .popupbox textarea, .popupbox .pop-title {
+    display: block;
+    margin: 0 auto;
+    width: 400px;
+    font-size: 16px;
+    padding: 5px;
+    margin-top: 10px; }
+
+/*# sourceMappingURL=main.css.map */

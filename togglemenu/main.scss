@@ -1,0 +1,291 @@
+$color: hsla(67,100%,50%,1);
+$color2: hsla(247,2%,5%,1);
+$col3: lighten($color,50%);
+$coli: inherit;
+$full: 1;
+$padding: 40px;
+$pad: $padding/2;
+$mwidth: 80%;
+$minwidth: 720px;
+$pop: 480px;
+$norm: 16px;
+$large: $norm*1.5;
+$giant: $norm*2.5;
+$trans: transparent;
+$tab: 420px;
+$desk: 820px;
+
+$s: 20px;
+$s1: $s*2;
+$s2: $s*4;
+$s01: $s/2;
+$s02: $s/4;
+$s03: $s/8;
+
+
+
+
+@mixin centermenu($width){
+	margin: 0 auto;
+	text-align: center;
+	width: $width;
+	/*min-width: $minwidth;*/
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+}
+
+@mixin fontz{
+
+		font-family: Century Gothic, sans-serif;
+		font-weight: normal;
+		color: $col3;
+
+}
+
+@mixin pseudo{
+
+	content:"";
+	display: inline-block;
+	position: relative;
+	top: 0;
+	left: 0;
+	background-color: $trans;
+
+}
+
+@mixin arrowdown{
+
+		border-top: 8px solid $col3;
+		border-bottom: 8px solid $trans;
+		border-left: 8px solid $trans;
+		border-right: 8px solid $trans;
+		@include pseudo;
+		top: 9px;
+		left: -($s02);
+
+}
+
+@mixin flex{
+	
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;
+	
+	@media screen and (min-width: $tab) {
+	
+		flex-direction: row;
+	}
+	
+	@media screen and (min-width: $desk) {
+	
+	
+	}
+
+}
+
+
+
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body{
+	margin: 0;
+	background-color: lighten($color2, 20%); 
+}
+
+@for $num from 1 through 5{
+	
+	h#{$num}{
+		@include fontz;
+		font-size: $large*2/$num;
+	}
+	
+}
+
+p, a, li, span {
+
+	@include fontz;
+
+}
+
+.main-nav{
+    
+    background-color: $color2;
+    margin-bottom: $pad/2;
+    width: 100%;
+    padding: 0 2%;
+    display: table;
+    @include flex;
+    
+    .nav-button{
+    
+		background-color: $color2;
+		flex: 1;
+		/*width: $padding*3;*/
+		transition: background-color 0.2s;
+		
+		
+		a{
+			color: $color;
+			text-decoration: none;
+			@include fontz;
+			/*padding: $pad+4px ($s1)-10px;*/ /*on for undefined display*/
+			display: inline-block; /*on for display block*/
+			width: 100%; /*on for display block*/
+			line-height: $s1;
+		
+			font: {
+		
+				size: $s;
+			
+			}
+			
+			
+			@media screen and (min-width: $tab) {
+	
+				font-size: $s01;
+			}
+			
+			@media screen and (min-width: $desk) {
+	
+				font-size: $s;
+				line-height: $s2;
+			}
+		}
+		
+		&:hover{
+		
+			background-color: $color;
+			
+			a{
+				color: $color2;
+			}
+		}
+				
+    
+    }
+    
+
+	
+	.chosen{
+	
+		background-color: lighten($color,10%);
+		
+		a{
+			color: lighten($color2,10%);
+		}
+	
+	}
+	
+
+
+}
+
+	.clip{
+		
+		background-color: $color2;
+		border-radius: 8px;
+		position: relative;
+		font-size: 0;
+		top: -($pad);
+		left: $s02;
+		width: $s+6px;
+		padding: $s01;
+		cursor: pointer;
+		transition: all 0.2s;
+		
+		
+		&:hover{
+		
+			color: $color;
+			
+			&:after{
+				border-top: 10px solid $color;
+			}
+			
+			
+		}
+		
+		&:after{
+		
+			@include arrowdown;
+			width: 5px;
+			height: 5px;
+			transition: -moz-transform 0.3s;
+		
+		}
+		
+		&.roll-out{
+		
+			top: -($padding);
+		
+		}
+		
+		&.roll-out:after{
+			
+			-moz-transform: rotate(-180deg);
+			top: 0;
+			
+		}
+			
+	}
+	
+	
+	.clip.full{
+		width: $padding*3;
+		padding: ($pad/2)+2px $pad $pad/2 $pad;	
+		left: $pad/2;
+		@include fontz;
+	
+	}
+
+
+section{
+	@include centermenu($mwidth);
+	background-color: $color2;
+	padding: $pad $pad/2;
+}
+
+.menu{
+	@include centermenu($mwidth);
+	background-color: $color2;
+	padding: 0 $pad/2;
+	@include flex;
+	list-style: none;
+}
+
+.popupbox{
+	@include centermenu($pop);
+	background-color: $color;
+	position: absolute;
+	top: $s2;
+	left: $mwidth/1.5;
+	padding: $s1;
+	text-align: center;
+	border-radius: 4px;
+	
+	input, textarea, .pop-title{
+	
+		display: block;
+		margin: 0 auto;
+		width: $s2*5;
+		font-size: $norm;
+		padding: $s02;
+		margin-top: $s01;
+		
+	
+	}
+
+}
+
+
+
+	
