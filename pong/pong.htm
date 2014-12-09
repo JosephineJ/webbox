@@ -1,0 +1,176 @@
+<!doctype html>
+<html>
+	<head>
+		<style type="text/css">
+			*{
+				box-sizing: border-box;
+			}
+			body{
+				
+				background-color: #222222;		
+			}
+			.wrapper {
+					width: 900px;
+					padding: 50px;
+					margin: 0 auto;	
+					position: relative;	
+			}
+			h2{
+				font-size: 48px;
+				color: #00FF00;
+				font-family: Arial, sans-serif;
+				width: 49%;
+				text-align: center;
+				display: inline-block;
+				position: relative;
+				}
+			
+		</style>
+	</head>
+	<body>
+		<div class="wrapper">
+	<canvas id="play-field" height="500" width="800">
+	
+	</canvas>
+			<h2 id="uscore">0</h2>
+			<h2 id="aiscore">0</h2>			
+	</div>
+		<script type="text/javascript">
+			
+			var canvas = document.getElementById("play-field");
+			var context = canvas.getContext('2d');
+			var batHeight = 150;
+			
+			var kloppdingi_draw = function(x,y){
+				
+
+
+				
+				
+				context.beginPath();
+				context.rect(x, batTopY(y), 50, batHeight);
+				context.fillStyle = '#00FF00';
+				context.fill();
+				
+			};
+			
+			var ball_draw = function(x,y){
+								
+				context.beginPath();
+				context.rect(x, y, 50, 50);
+				context.fillStyle = '#00FF00';
+				context.fill();
+				
+			};
+			
+			var clearCanvas = function(){
+				
+				context.clear();
+				
+			}
+			
+			var batTopY = function(y){
+				
+				return y - batHeight / 2;
+			};
+			
+			var batBottomY = function(y){
+				
+				return y + batHeight / 2;
+			};
+			
+			var intervalID = window.setInterval(function(){
+				
+
+				context.clearRect(0, 0, canvas.width, canvas.height);
+				ball_draw(ballX,ballY);
+				kloppdingi_draw(20,mouseY);
+				kloppdingi_draw(canvas.width - 50, aiY);
+
+				ballX += ballVelX;
+				ballY += ballVelY;
+				if (ballY > canvas.height -50){
+					
+					ballVelY = -ballVelY;
+				}
+				else if (ballY <  0){
+					
+					ballVelY = -ballVelY;
+					
+				}
+				if (ballX > canvas.width - 70 && batTopY(aiY) < ballY && ballY < batBottomY(aiY)){
+					
+					ballX = canvas.width - 70;
+					ballVelX = -ballVelX;
+				}
+				else if (ballX <  70 &&  batTopY(mouseY) < ballY && ballY < batBottomY(mouseY) ){
+					
+					ballX = 70;
+					ballVelY = (ballY - mouseY + 25 ) / 5;
+					ballVelX = -ballVelX;
+					
+				}
+				else if (ballX < -50){
+					
+					aiScore++;
+					var aiScoreElement = document.getElementById("aiscore");
+					aiScoreElement.textContent = aiScore;
+					ballX = canvas.width / 2;
+					ballY = canvas.height / 2;
+					ballVelY = 10;
+					
+				}
+				else if (ballX > canvas.width){
+					
+					uScore++;
+					var uScoreElement = document.getElementById("uscore");
+					uScoreElement.textContent = uScore;
+					ballX = canvas.width / 2;
+					ballY = canvas.height / 2;
+					ballVelY = 10;
+					
+				}
+				
+				var updateAi = function(){
+					
+					
+					if (ballY > aiY){
+					aiY += Math.abs(2);
+					
+					}
+					else if(ballY < aiY){
+						
+						aiY -= Math.abs(2);
+						
+					}
+				};
+				
+				updateAi();
+				
+				
+				}, 20);
+				
+				
+
+			var mouseX = 0;
+			var mouseY = 0;
+			var ballX = 0;
+			var ballY = 0;
+			var ballVelX = 10;
+			var ballVelY = 10;
+			var aiY = 20;
+			var uScore = 0;
+			var aiScore = 0;
+	
+
+			document.onmousemove = function (e) {
+				
+				mouseX = e.pageX; 
+				mouseY = e.pageY;
+
+				
+				};
+	
+		</script>
+	</body>
+</html>
