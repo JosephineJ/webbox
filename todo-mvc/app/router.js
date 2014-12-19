@@ -6,7 +6,13 @@ location: config.locationType
 });
  
 Router.map(function() {
-this.resource('todos', {path: '/'});
+ this.resource('todos', { path: '/' }, function() {
+this.route('active');
+this.route('complete');
+}); 
+
+  this.route('todos/complete');
+  this.route('todos/active');
 });
  
 export default Router; 
