@@ -1,0 +1,55 @@
+/* Containers CSS File */
+/* ------------------- */
+/*
+----------------------------
+C1. Mixins
+C2. Models
+
+*/
+  
+/* C1. Mixins */ 
+@mixin centered{
+	margin: 0 auto;
+	text-align: center;
+	
+	&:after {
+		content: "";
+		display: table;
+		clear: both;
+	}
+	
+}
+@mixin flex{
+	
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;	
+	@media screen and (min-width: $tab) {	
+		flex-direction: row;
+	}	
+	@media screen and (min-width: $desk) {		
+	}
+
+}
+@mixin flex-col{
+	
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: column;	
+
+}
+@mixin flex-row{
+	
+	display: -webkit-flex;
+	display: flex;
+	flex-direction: row;	
+
+}
+/* Testing */
+/*body{
+	background-color: #676767;
+}*/
+/* C2. Models */
+*, *:after, *:before {
+	@include vendor(box-sizing, border-box);
+}

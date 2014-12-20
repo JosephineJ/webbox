@@ -1,0 +1,41 @@
+/* Base CSS File */
+/* ------------------- */
+/*
+----------------------------
+C2. Mixins
+
+*/
+/* C1. Global Variables */
+$tab: 420px;
+$desk: 820px;
+$width-main: 80%;
+
+/* Paddings */
+$pad-1: 14px;
+$pad-2: 28px;
+$pad-3: 42px;
+
+/*Margins */
+$mar-1: 21px;
+$mar-2: 42px;
+$mar-3: 63px;
+$mar-4: 84px;
+$mar-5: 105px;
+
+/* Margins */
+  
+/* C2. Mixins */  
+@mixin vendor($attr, $argument) {
+  -webkit-#{$attr}: #{$argument};
+  -ms-#{$attr}: #{$argument};
+  -moz-#{$attr}: #{$argument};
+  -o-#{$attr}: #{$argument};
+  #{$attr}: #{$argument};
+}
+
+
+/* Testing */
+/*body{
+	background-color: #676767;
+}
+*/

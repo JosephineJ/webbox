@@ -1,0 +1,35 @@
+/* Navigation */
+.top-header{
+	@include centered;
+}
+.main-nav{
+	@include centered;
+	@include flex;
+	width: $width-main;
+	a{
+		flex: 1;
+		text-decoration: none;
+		padding: $pad-1;
+		background-color: $bg-color-3;
+		
+		&:hover{
+			background-color: $bg-color-2;
+			color: $light-3;
+		}
+		@media screen and (min-width: $desk) {	
+			font-size: $fs-3;
+			padding: $pad-2;
+		}
+	}
+}
+
+
+/* Main Parts */
+.main-section{
+	@include centered;
+	width: $width-main;
+}
+/* Footer */
+.main-footer{
+	@include centered;
+}

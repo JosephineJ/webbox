@@ -1,0 +1,642 @@
+/* Basic CSS File */
+/* ----------------------- */
+/* ----------------------- */
+/* Reset CSS */
+/*! normalize.css v1.0.0 | MIT License | git.io/normalize */
+/* ==========================================================================
+    HTML5 display definitions
+    ========================================================================== */
+/*
+    * Corrects `block` display not defined in IE 6/7/8/9 and Firefox 3.
+    */
+/* line 21, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+article, aside, details, figcaption, figure, footer, header, hgroup, nav, section, summary {
+  display: block; }
+
+/*
+    * Corrects `inline-block` display not defined in IE 6/7/8/9 and Firefox 3.
+    */
+/* line 31, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+audio, canvas, video {
+  display: inline-block;
+  *display: inline;
+  *zoom: 1; }
+
+/*
+    * Prevents modern browsers from displaying `audio` without controls.
+    * Remove excess height in iOS 5 devices.
+    */
+/* line 42, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+audio:not([controls]) {
+  display: none;
+  height: 0; }
+
+/*
+    * Addresses styling for `hidden` attribute not present in IE 7/8/9, Firefox 3,
+    * and Safari 4.
+    * Known issue: no IE 6 support.
+    */
+/* line 53, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+[hidden] {
+  display: none; }
+
+/* ==========================================================================
+    Base
+    ========================================================================== */
+/*
+    * 1. Corrects text resizing oddly in IE 6/7 when body `font-size` is set using
+    * `em` units.
+    * 2. Prevents iOS text size adjust after orientation change, without disabling
+    * user zoom.
+    */
+/* line 68, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+html {
+  font-size: 100%;
+  /* 1 */
+  -webkit-text-size-adjust: 100%;
+  /* 2 */
+  -ms-text-size-adjust: 100%;
+  /* 2 */ }
+
+/*
+    * Addresses `font-family` inconsistency between `textarea` and other form
+    * elements.
+    */
+/* line 83, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+html, button, input, select, textarea {
+  font-family: sans-serif; }
+
+/*
+    * Addresses margins handled incorrectly in IE 6/7.
+    */
+/* line 91, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+body {
+  margin: 0; }
+
+/* ==========================================================================
+    Links
+    ========================================================================== */
+/*
+    * Addresses `outline` inconsistency between Chrome and other browsers.
+    */
+/* line 103, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+a:focus {
+  outline: thin dotted; }
+
+/*
+    * Improves readability when focused and also mouse hovered in all browsers.
+    */
+/* line 112, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+a:active, a:hover {
+  outline: 0; }
+
+/* ==========================================================================
+    Typography
+    ========================================================================== */
+/*
+    * Addresses font sizes and margins set differently in IE 6/7.
+    * Addresses font sizes within `section` and `article` in Firefox 4+, Safari 5,
+    * and Chrome.
+    */
+/* line 126, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h1 {
+  font-size: 2em;
+  margin: 0.67em 0; }
+
+/* line 131, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h2 {
+  font-size: 1.5em;
+  margin: 0.83em 0; }
+
+/* line 136, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h3 {
+  font-size: 1.17em;
+  margin: 1em 0; }
+
+/* line 141, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h4 {
+  font-size: 1em;
+  margin: 1.33em 0; }
+
+/* line 146, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h5 {
+  font-size: 0.83em;
+  margin: 1.67em 0; }
+
+/* line 151, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+h6 {
+  font-size: 0.75em;
+  margin: 2.33em 0; }
+
+/*
+    * Addresses styling not present in IE 7/8/9, Safari 5, and Chrome.
+    */
+/* line 160, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+abbr[title] {
+  border-bottom: 1px dotted; }
+
+/*
+    * Addresses style set to `bolder` in Firefox 3+, Safari 4/5, and Chrome.
+    */
+/* line 169, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+b, strong {
+  font-weight: bold; }
+
+/* line 173, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+blockquote {
+  margin: 1em 40px; }
+
+/*
+    * Addresses styling not present in Safari 5 and Chrome.
+    */
+/* line 181, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+dfn {
+  font-style: italic; }
+
+/*
+    * Addresses styling not present in IE 6/7/8/9.
+    */
+/* line 189, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+mark {
+  background: #ff0;
+  color: #000; }
+
+/*
+    * Addresses margins set differently in IE 6/7.
+    */
+/* line 199, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+p, pre {
+  margin: 1em 0; }
+
+/*
+    * Corrects font family set oddly in IE 6, Safari 4/5, and Chrome.
+    */
+/* line 210, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+code, kbd, pre, samp {
+  font-family: monospace, serif;
+  _font-family: 'courier new', monospace;
+  font-size: 1em; }
+
+/*
+    * Improves readability of pre-formatted text in all browsers.
+    */
+/* line 220, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+pre {
+  white-space: pre;
+  white-space: pre-wrap;
+  word-wrap: break-word; }
+
+/*
+    * Addresses CSS quotes not supported in IE 6/7.
+    */
+/* line 230, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+q {
+  quotes: none; }
+
+/*
+    * Addresses `quotes` property not supported in Safari 4.
+    */
+/* line 239, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+q:before, q:after {
+  content: '';
+  content: none; }
+
+/* line 244, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+small {
+  font-size: 75%; }
+
+/*
+    * Prevents `sub` and `sup` affecting `line-height` in all browsers.
+    */
+/* line 253, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+sub, sup {
+  font-size: 75%;
+  line-height: 0;
+  position: relative;
+  vertical-align: baseline; }
+
+/* line 260, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+sup {
+  top: -0.5em; }
+
+/* line 264, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+sub {
+  bottom: -0.25em; }
+
+/* ==========================================================================
+    Lists
+    ========================================================================== */
+/*
+    * Addresses margins set differently in IE 6/7.
+    */
+/* line 279, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+dl, menu, ol, ul {
+  margin: 1em 0; }
+
+/* line 283, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+dd {
+  margin: 0 0 0 40px; }
+
+/*
+    * Addresses paddings set differently in IE 6/7.
+    */
+/* line 293, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+menu, ol, ul {
+  padding: 0 0 0 40px; }
+
+/*
+    * Corrects list images handled incorrectly in IE 7.
+    */
+/* line 302, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+nav ul, nav ol {
+  list-style: none;
+  list-style-image: none; }
+
+/* ==========================================================================
+    Embedded content
+    ========================================================================== */
+/*
+    * 1. Removes border when inside `a` element in IE 6/7/8/9 and Firefox 3.
+    * 2. Improves image quality when scaled in IE 7.
+    */
+/* line 316, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+img {
+  border: 0;
+  /* 1 */
+  -ms-interpolation-mode: bicubic;
+  /* 2 */ }
+
+/*
+    * Corrects overflow displayed oddly in IE 9.
+    */
+/* line 325, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+svg:not(:root) {
+  overflow: hidden; }
+
+/* ==========================================================================
+    Figures
+    ========================================================================== */
+/*
+    * Addresses margin not present in IE 6/7/8/9, Safari 5, and Opera 11.
+    */
+/* line 337, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+figure {
+  margin: 0; }
+
+/* ==========================================================================
+    Forms
+    ========================================================================== */
+/*
+    * Corrects margin displayed oddly in IE 6/7.
+    */
+/* line 349, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+form {
+  margin: 0; }
+
+/*
+    * Define consistent border, margin, and padding.
+    */
+/* line 357, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+fieldset {
+  border: 1px solid #c0c0c0;
+  margin: 0 2px;
+  padding: 0.35em 0.625em 0.75em; }
+
+/*
+    * 1. Corrects color not being inherited in IE 6/7/8/9.
+    * 2. Corrects text not wrapping in Firefox 3.
+    * 3. Corrects alignment displayed oddly in IE 6/7.
+    */
+/* line 369, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+legend {
+  border: 0;
+  /* 1 */
+  padding: 0;
+  white-space: normal;
+  /* 2 */
+  *margin-left: -7px;
+  /* 3 */ }
+
+/*
+    * 1. Corrects font size not being inherited in all browsers.
+    * 2. Addresses margins set differently in IE 6/7, Firefox 3+, Safari 5,
+    * and Chrome.
+    * 3. Improves appearance and consistency in all browsers.
+    */
+/* line 386, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+button, input, select, textarea {
+  font-size: 100%;
+  /* 1 */
+  margin: 0;
+  /* 2 */
+  vertical-align: baseline;
+  /* 3 */
+  *vertical-align: middle;
+  /* 3 */ }
+
+/*
+    * Addresses Firefox 3+ setting `line-height` on `input` using `!important` in
+    * the UA stylesheet.
+    */
+/* line 399, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+button, input {
+  line-height: normal; }
+
+/*
+    * 1. Avoid the WebKit bug in Android 4.0.* where (2) destroys native `audio`
+    * and `video` controls.
+    * 2. Corrects inability to style clickable `input` types in iOS.
+    * 3. Improves usability and consistency of cursor style between image-type
+    * `input` and others.
+    * 4. Removes inner spacing in IE 7 without affecting normal text inputs.
+    * Known issue: inner spacing remains in IE 6.
+    */
+/* line 416, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+button, html input[type="button"], input[type="reset"], input[type="submit"] {
+  -webkit-appearance: button;
+  /* 2 */
+  cursor: pointer;
+  /* 3 */
+  *overflow: visible;
+  /* 4 */ }
+
+/*
+    * Re-set default cursor for disabled elements.
+    */
+/* line 427, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+button[disabled], input[disabled] {
+  cursor: default; }
+
+/*
+    * 1. Addresses box sizing set to content-box in IE 8/9.
+    * 2. Removes excess padding in IE 8/9.
+    * 3. Removes excess padding in IE 7.
+    * Known issue: excess padding remains in IE 6.
+    */
+/* line 439, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+input[type="checkbox"], input[type="radio"] {
+  box-sizing: border-box;
+  /* 1 */
+  padding: 0;
+  /* 2 */
+  *height: 13px;
+  /* 3 */
+  *width: 13px;
+  /* 3 */ }
+
+/*
+    * 1. Addresses `appearance` set to `searchfield` in Safari 5 and Chrome.
+    * 2. Addresses `box-sizing` set to `border-box` in Safari 5 and Chrome
+    * (include `-moz` to future-proof).
+    */
+/* line 452, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+input[type="search"] {
+  -webkit-appearance: textfield;
+  /* 1 */
+  -moz-box-sizing: content-box;
+  -webkit-box-sizing: content-box;
+  /* 2 */
+  box-sizing: content-box; }
+
+/*
+    * Removes inner padding and search cancel button in Safari 5 and Chrome
+    * on OS X.
+    */
+/* line 465, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+input[type="search"]::-webkit-search-cancel-button, input[type="search"]::-webkit-search-decoration {
+  -webkit-appearance: none; }
+
+/*
+    * Removes inner padding and border in Firefox 3+.
+    */
+/* line 474, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+button::-moz-focus-inner, input::-moz-focus-inner {
+  border: 0;
+  padding: 0; }
+
+/*
+    * 1. Removes default vertical scrollbar in IE 6/7/8/9.
+    * 2. Improves readability and alignment in all browsers.
+    */
+/* line 484, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+textarea {
+  overflow: auto;
+  /* 1 */
+  vertical-align: top;
+  /* 2 */ }
+
+/* ==========================================================================
+    Tables
+    ========================================================================== */
+/*
+    * Remove most spacing between table cells.
+    */
+/* line 497, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/normalize */
+table {
+  border-collapse: collapse;
+  border-spacing: 0; }
+
+/*General SASS Mixins and global variables */
+/* Base CSS File */
+/* ------------------- */
+/*
+----------------------------
+C2. Mixins
+
+*/
+/* C1. Global Variables */
+/* Paddings */
+/*Margins */
+/* Margins */
+/* C2. Mixins */
+/* Testing */
+/*body{
+	background-color: #676767;
+}
+*/
+/*Theme variables */
+/* Theme Regular - Look and Feel Definitions */
+/*--------------------------*/
+/*--------------------------*/
+/*
+----------------------------
+C1. Colors
+- C1a. Fonts
+- C1b. Backgrounds
+- C1c. Popular Elements
+C2. Mixins
+C3. Font-Sizes and Text Elements
+
+*/
+/* C1a. Fonts */
+/* C1b. Backgrounds */
+/* C1c. Popular Elements */
+/* Main Elements */
+/* Containers CSS File */
+/* ------------------- */
+/*
+----------------------------
+C1. Mixins
+C2. Models
+
+*/
+/* C1. Mixins */
+/* Testing */
+/*body{
+	background-color: #676767;
+}*/
+/* C2. Models */
+/* line 53, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/containers */
+*, *:after, *:before {
+  -webkit-box-sizing: border-box;
+  -ms-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  -o-box-sizing: border-box;
+  box-sizing: border-box; }
+
+/* Typography  */
+/* Typography CSS File */
+/* ------------------- */
+/*
+----------------------------
+C1. Font Families
+C2. Mixins
+C3. Font-Sizes and Text Elements
+
+*/
+/* C1. Font Families */
+/*Icon Fonts
+Freely distributed by MFG Labs.
+MFG Labs icon set from MFG Labs is licensed under a Creative Commons Attribution 3.0 License. */
+@font-face {
+  font-family: 'gibson';
+  src: url('font/gibson-webfont.eot');
+  src: url('font/gibson-webfont.eot?#iefix') format('embedded-opentype'), url('font/gibson-webfont.woff') format('woff'), url('font/gibson-webfont.ttf') format('truetype'), url('font/gibson-webfont.svg#gibsonregular') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gibson-light';
+  src: url('font/gibson-semibold-webfont.eot');
+  src: url('font/gibson-semibold-webfont.eot?#iefix') format('embedded-opentype'), url('font/gibson-semibold-webfont.woff') format('woff'), url('font/gibson-semibold-webfont.ttf') format('truetype'), url('font/gibson-semibold-webfont.svg#gibson_lightbold') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+@font-face {
+  font-family: 'gibson-it';
+  src: url('font/gibson-light-italic-webfont.eot');
+  src: url('font/gibson-light-italic-webfont.eot?#iefix') format('embedded-opentype'), url('font/gibson-light-italic-webfont.woff') format('woff'), url('font/gibson-light-italic-webfont.ttf') format('truetype'), url('font/gibson-light-italic-webfont.svg#gibson_lightitalic') format('svg');
+  font-weight: normal;
+  font-style: normal; }
+
+/* C2. Mixins */
+/* C3. Text Elements */
+/* line 78, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+h1 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 56px; }
+
+/* line 78, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+h2 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 42px; }
+
+/* line 78, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+h3 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 28px; }
+
+/* line 78, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+h4 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 14px; }
+
+/* line 78, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+h5 {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 0px; }
+
+/* line 84, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/typography */
+p, a, li, span {
+  font-family: Century Gothic, sans-serif;
+  font-weight: normal;
+  color: #444444;
+  font-size: 14px; }
+
+/* Patterns */
+/* Navigation */
+/* line 2, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+.top-header {
+  margin: 0 auto;
+  text-align: center; }
+  /* line 15, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/containers */
+  .top-header:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* line 5, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+.main-nav {
+  margin: 0 auto;
+  text-align: center;
+  display: -webkit-flex;
+  display: flex;
+  flex-direction: column;
+  width: 80%; }
+  /* line 15, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/containers */
+  .main-nav:after {
+    content: "";
+    display: table;
+    clear: both; }
+  @media screen and (min-width: 420px) {
+    .main-nav {
+      flex-direction: row; } }
+  /* line 9, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+  .main-nav a {
+    flex: 1;
+    text-decoration: none;
+    padding: 14px;
+    background-color: #dd0033; }
+    /* line 15, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+    .main-nav a:hover {
+      background-color: #111111;
+      color: #f9f9f9; }
+    @media screen and (min-width: 820px) {
+      .main-nav a {
+        font-size: 22px;
+        padding: 28px; } }
+
+/* Main Parts */
+/* line 28, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+.main-section {
+  margin: 0 auto;
+  text-align: center;
+  width: 80%; }
+  /* line 15, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/containers */
+  .main-section:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/* Footer */
+/* line 33, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/patterns */
+.main-footer {
+  margin: 0 auto;
+  text-align: center; }
+  /* line 15, /home/jj/Documents/opentech/dev/trunk/edev/dee/tmp/tree_merger-tmp_dest_dir-5430zEfV.tmp/app/styles/partials/containers */
+  .main-footer:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+/*# sourceMappingURL=dee.css.map */
