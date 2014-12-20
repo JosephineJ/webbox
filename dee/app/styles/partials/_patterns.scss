@@ -16,6 +16,10 @@
 			background-color: $bg-color-2;
 			color: $light-3;
 		}
+		&.active{
+			background-color: $bg-color-1;
+			color: $dark-1;
+		}
 		@media screen and (min-width: $desk) {	
 			font-size: $fs-3;
 			padding: $pad-2;
