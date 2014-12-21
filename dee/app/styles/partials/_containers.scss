@@ -8,16 +8,16 @@ C2. Models
 */
   
 /* C1. Mixins */ 
-@mixin centered{
-	margin: 0 auto;
-	text-align: center;
-	
+@mixin clear{
 	&:after {
 		content: "";
 		display: table;
 		clear: both;
 	}
-	
+}
+@mixin centered{
+	margin: 0 auto;
+	@include clear;
 }
 @mixin flex{
 	
@@ -53,3 +53,50 @@ C2. Models
 *, *:after, *:before {
 	@include vendor(box-sizing, border-box);
 }
+/* C3. Layout */
+.row{
+	@include clear;
+}
+.row-col{
+	@include clear;
+	@include flex-col;
+}
+.row-row{
+	@include clear;
+	@include flex-row;
+}
+.row-colrow{
+	@include clear;
+	@include flex;
+}
+.fullsize, .halfsize{
+	flex: 1;
+}
+.fullsize{
+	background-color: $bg-color-1;
+}
+.fullsize:nth-child(2n+2){
+	background-color: $bg-color-3;
+}
+@for $num from 1 through 13{		
+	.part-#{$num}{
+		flex: $num;
+		padding: $pad-1;
+	}	
+}
+.center-box{
+	flex: 1;
+	width: $width-main;
+	@include centered;
+	margin: $mar-1 auto;
+	background-color: $transpa;
+}
+.center-box-fill{
+	flex: 1;
+	width: $width-main;
+	@include centered;
+	margin: $mar-1 auto;
+	background-color: $bg-color-1;
+}
+
+

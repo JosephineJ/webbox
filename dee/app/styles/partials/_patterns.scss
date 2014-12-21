@@ -1,19 +1,22 @@
 /* Navigation */
 .top-header{
 	@include centered;
-}
+	background-color: $bg-color-2;
+	}
 .main-nav{
 	@include centered;
 	@include flex;
 	width: $width-main;
+	padding: 0 $pad-1;
 	a{
 		flex: 1;
 		text-decoration: none;
+		text-align: center;
 		padding: $pad-1;
-		background-color: $bg-color-3;
+		background-color: $bg-color-2;
 		
 		&:hover{
-			background-color: $bg-color-2;
+			background-color: $bg-color-3;
 			color: $light-3;
 		}
 		&.active{
@@ -29,9 +32,14 @@
 
 
 /* Main Parts */
+.wrapper{
+	background-color: $dark-1;
+}
 .main-section{
 	@include centered;
-	width: $width-main;
+	@include flex-col;
+	//width: $width-main;
+	background-color: $bg-color-1;
 }
 /* Footer */
 .main-footer{

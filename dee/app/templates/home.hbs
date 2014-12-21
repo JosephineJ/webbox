@@ -1,3 +1,22 @@
-<h2 id='title'>Welcome to Home</h2>
-
-{{outlet}}
+<section class="fullsize">
+<div class="center-box row-colrow">
+<div class="part-1">
+<h1 id='title'>Welcome to Dee</h1>
+</div>
+<div class="part-1">
+	<p>Tell me more, tell me more....</p>
+</div>
+</div>
+</section>
+{{#each itemController="news-item"}}
+<section class="full-size">
+<div class="center-box row-col">
+	<div class="part-1">
+		<h2 class="news-title">{{news-title}}</h2>
+	</div>
+	<div class="part-1">
+		<p>{{news-content}}</p>
+	</div>
+</div>
+</section>
+{{/each}}
