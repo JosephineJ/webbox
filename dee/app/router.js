@@ -8,9 +8,11 @@ var Router = Ember.Router.extend({
 Router.map(function() {
 	this.route("about", { path: "/about" });
 	//this.route("comic", { path: "/comic" });
-	this.resource("home", { path: "/" }, function(){
+	this.route("newsitem");
+	this.route("favorites");
+	/*this.resource("home", { path: "/" }, function(){
 		this.route('news');
-	});
+	});*/
 	this.route("contact", { path: "/contact" });
 	this.resource('comic', { path: '/comic' }, function() {
 		this.route('chapter1');
