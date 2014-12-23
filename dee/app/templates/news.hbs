@@ -1,0 +1,34 @@
+<section class="fullsize">
+<div class="center-box row-colrow">
+<div class="part-1">
+<h1 id='title'>Welcome to Dee</h1>
+</div>
+<div class="part-1">
+	<p>Tell me more, tell me more....</p>
+</div>
+</div>
+</section>
+{{#each}}
+<section class="fullsize">
+<div class="center-box row-col">
+	<div class="part-1">
+		<h2 class="news-title">{{title}}</h2>
+	</div>
+	<div class="part-1">
+		<p>{{articleContent}}</p>
+	</div>
+</div>
+</section>
+{{/each}}
+<section class="fullsize">
+<div class="center-box row-row">
+<div class="part-1">
+<p>Public: {{public}}</p>
+</div>
+<div class="part-1">
+<p>Private: {{private}}</p>
+</div>
+</div>
+</section>
+
+{{outlet}}
