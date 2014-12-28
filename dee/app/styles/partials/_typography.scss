@@ -73,6 +73,8 @@ $fs-01: 12px;
 $fs-02: 10px;
 $fs-03: 9px;
 
+$lh-1: 24px;
+
 @for $num from 1 through 5{	
 	
 	h#{$num}{
@@ -85,5 +87,6 @@ p, a, li, span {
 
 	@include font;
 	font-size: $fs-1;
+	line-height: $lh-1;
 
 }

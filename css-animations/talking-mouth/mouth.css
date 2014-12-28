@@ -1,0 +1,63 @@
+/* Variables */
+/* Animations */
+@keyframes breathe-1 {
+  from {
+    /*top: $start-mouth;*/
+    border-bottom: 1px solid #f9f9f9; }
+  to {
+    /*top: $start-mouth + 4;*/
+    border-bottom: 4px solid #f9f9f9; } }
+.centered {
+  margin: 0 auto;
+  position: relative;
+  width: 800px;
+  background-color: #f9f9f9; }
+  .centered:after {
+    content: "";
+    display: table;
+    clear: both; }
+
+h1 {
+  font-size: 20px;
+  color: #444444;
+  font-family: Arial, sans-serif; }
+
+.face {
+  background-image: url("talkingface.png");
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-attachment: scroll;
+  background-position: 0 0;
+  background-size: auto 500px;
+  min-height: 500px; }
+
+.mouth {
+  border-bottom: 1px solid #f9f9f9;
+  border-left: 5px solid transparent;
+  border-right: 5px solid transparent;
+  -moz-border-image: url("border.png") 5 5 repeat;
+  left: 313px;
+  top: 317px;
+  height: 0;
+  width: 20px;
+  position: relative;
+  animation-duration: 1s;
+  animation-name: breathe-1;
+  animation-iteration-count: infinite;
+  animation-direction: alternate; }
+
+.underlip {
+  background-repeat: no-repeat;
+  background-color: transparent;
+  background-attachment: scroll;
+  background-position: 0 0;
+  position: relative;
+  left: 305px;
+  top: 304px;
+  display: block;
+  background-image: url("lip.png");
+  background-size: 49px auto;
+  min-height: 25px;
+  width: 49px; }
+
+/*# sourceMappingURL=mouth.css.map */
