@@ -13,12 +13,11 @@
 </main>
 <footer class="main-footer">
 <div class="center-box row-colrow">
-<ul class="part-1">
-<li class="footer-title">Be Social</li>
-<li>Stuff 1</li>
-<li>Stuff 2</li>
-<li>Stuff 3</li>
-<li>Stuff 4</li>
+<ul class="part-1 row-colrow social">
+<li class="footer-title ">Be Social</li>
+<li>{{#link-to 'news'}}{{fa-icon "facebook-square" size=5}}{{/link-to}}</li>
+<li>{{#link-to 'news'}}{{fa-icon "google-plus" size=5}}{{/link-to}}</li>
+<li>{{#link-to 'news'}}{{fa-icon "twitter" size=5}}{{/link-to}}</li>
 </ul>
 <ul class="part-1">
 <li class="footer-title">Features</li>
@@ -31,7 +30,7 @@
 <li class="footer-title">About</li>
 <li>{{#link-to 'about'}}About us{{/link-to}}</li>
 <li>Impressum</li>
-<li>Stuff 3</li>
+<li>{{#link-to 'news'}}Attribution{{/link-to}}</li>
 <li>Stuff 4</li>
 </ul>
 </div>

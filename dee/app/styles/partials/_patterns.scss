@@ -45,6 +45,7 @@
 .main-footer{
 	@include centered;
 	background-color: $bg-color-2;
+	padding: $pad-1 0;
 	
 	ul{
 		list-style-type: none;
@@ -67,6 +68,24 @@
 			&:hover{
 				color: $light-2;
 			}
+		}
+		&.social{
+		
+			.footer-title{
+				margin-right: $mar-1;
+			
+			}
+			
+			i {
+				letter-spacing: $mar-1;
+				margin-top: - $pad-1;
+				line-height: $fs-8;
+				@media screen and (min-width: $tab) {
+					font-size: 3em;
+					line-height: $fs-6;
+				}
+			}
+		
 		}
 	}
 }
