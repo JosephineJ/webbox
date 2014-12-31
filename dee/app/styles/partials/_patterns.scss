@@ -33,7 +33,7 @@
 
 /* Main Parts */
 .wrapper{
-	background-color: $dark-1;
+	background-color: $bg-color-1;
 }
 .main-section{
 	@include centered;
@@ -44,6 +44,31 @@
 /* Footer */
 .main-footer{
 	@include centered;
+	background-color: $bg-color-2;
+	
+	ul{
+		list-style-type: none;
+		text-align: center;
+		@media screen and (min-width: $tab) {
+			text-align: left;
+		}	
+		.footer-title{
+			color: $light-1;
+			font-weight: bold;
+			font-size: $fs-2;
+			margin-bottom: $mar-1;
+		}		
+		li{
+			margin-bottom: $pad-1;		
+		}		
+		a{
+			color: $light-1;
+			text-decoration: none;
+			&:hover{
+				color: $light-2;
+			}
+		}
+	}
 }
 /* Content Elements */
 .content-box{
@@ -64,5 +89,11 @@
 	
 	.fullsize:nth-child(2n+2) &{
 		color: $bg-color-1;
+	}
+}
+
+a{
+	.fullsize &{
+		text-decoration: none;
 	}
 }

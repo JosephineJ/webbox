@@ -90,3 +90,12 @@ p, a, li, span {
 	line-height: $lh-1;
 
 }
+p > a{
+	&:link{
+		color: $linkblue;
+	}	
+	
+	&:visited, &:hover{
+		color: $visited;
+	}
+}
