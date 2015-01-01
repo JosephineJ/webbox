@@ -16,6 +16,7 @@ Router.map(function() {
 	this.route("about", { path: "/about" });
 	this.route("contact", { path: "/contact" });
 	this.resource('comic', { path: '/comic' }, function() {
+		this.route('intro');
 		this.route('chapter1');
 		this.route('chapter2');
 	}); 

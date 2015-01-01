@@ -75,6 +75,7 @@ $fs-02: 10px;
 $fs-03: 9px;
 
 $lh-1: 24px;
+$lh-2: 30px;
 
 @for $num from 1 through 5{	
 	
@@ -90,6 +91,11 @@ p, a, li, span {
 	font-size: $fs-1;
 	line-height: $lh-1;
 
+}
+a{
+	.fullsize &{
+		text-decoration: none;
+	}
 }
 p > a{
 	&:link{
