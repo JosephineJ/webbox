@@ -8,11 +8,13 @@
 /*General SASS Mixins and global variables */
 @import 'partials/base';
 
+/*Theme variables */
+@import 'partials/theme';
+
 /*Mixins and Keyframes for animations */
 @import 'partials/animations';
 
-/*Theme variables */
-@import 'partials/theme';
+
 
 /* Main Elements */
 @import 'partials/containers';

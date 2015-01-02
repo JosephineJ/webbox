@@ -50,6 +50,11 @@ $gp: "";
 	background-color: $bg-color-2;
 	padding:  0;
 	
+	.center-box{
+		margin-top: 0;
+		margin-bottom: 0;	
+	}
+	
 	ul{
 		list-style-type: none;
 		text-align: center;
@@ -128,6 +133,10 @@ $gp: "";
 		font-size: $fs-2;
 		line-height: $lh-2;
 	}
+	
+	.slidernav i{
+		cursor: pointer;	
+	}
 }
 /*Text Elements */
 .news-title{
@@ -189,6 +198,41 @@ $gp: "";
 		}
 	
 	}
+	
+.teaseme{
+	background-color: $bg-color-2;
+	
+	.bio-code{
+		color: $light-1;
+		font-size: $fs-4;
+		font-weight: 800;
+		font-family: monospace, sans-serif;
+		line-height: $lh-3;
+		letter-spacing: 0.5em;
+		text-align: justify;
+		word-break: break-all;
+		text-justify: inter-word;
+		
+		.typing-rod{
+			border-width: 2px;
+			border-style: solid;
+			border-color: transparent;
+			width: 2%;
+			height: $fs-4;
+			color: $light-1;
+			font-size: $fs-4;
+			line-height: $lh-3;
+			display: inline;
+			background-color: $bg-color-2;
+			animation-duration: 0.8s;
+			animation-name: blink;
+			animation-iteration-count: infinite;
+			animation-direction: normal;	
+		}
+	}
+	
+
+}
 
 
 

@@ -5,7 +5,6 @@ var NewsItem = Ember.Route.extend({
 		var aSinglePost = this.store.find('news', params.news_id);
 		return aSinglePost;
 		//return this.store.find('news');
-
 	}
 });
 

@@ -20,6 +20,7 @@ Router.map(function() {
 		this.route('chapter1');
 		this.route('chapter2');
 	}); 
+	this.route("teaseme");
 });
 
 export default Router;
