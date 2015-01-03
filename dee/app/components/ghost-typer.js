@@ -7,29 +7,38 @@ var ghostTyperComponent = Ember.Component.extend({
     },
  
     typing: function(text) {
-        var _this = this;
+		
+		var _this = this;
         var i = 0;
         var currentLetter ="";
         var len = text.length;
-        //var rod = document.getElementById("typing-rod");
-        //console.log(rod);
-        console.log(text.length);
- 
-        Ember.run.later(function() {
-			if (i < len){
+        console.log(len);
+		
+			Ember.run.later(function() {
+			//if (i < len){
 					currentLetter = text.substring(i,i+1);
 					console.log(currentLetter);
-					i++;
-					_this.set('tmpText', currentLetter);
-					return currentLetter;
-			}
+					//i++;
+					//_this.set('text', currentLetter);
+					//return currentLetter;
+					//_this.typing(_this.text);
+			/*}
 			else{
 					console.log("else statement");
 					return false;				
-			}
-            _this.typing();
-        }, 1000);
-    }
+			}*/
+           // _this.typing(this.text);
+           
+			}, 1000);
+		
+			_this.typing(this.text);
+		}
+		
+		//repeat();
+        
+         
+
+   
 
  	
 });

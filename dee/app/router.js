@@ -21,6 +21,8 @@ Router.map(function() {
 		this.route('chapter2');
 	}); 
 	this.route("teaseme");
+  this.route('clock');
+  this.route('klock');
 });
 
 export default Router;
