@@ -1,11 +1,12 @@
 import Ember from 'ember';
 
-var TeaseMeController = Ember.Controller.extend({
-	genename: function() {
+var TeaseMeController = Ember.ArrayController.extend({
+	
+	/*genename: function() {
 
-		return 'Gene Name: ' + this.get('geneName');
-
-	}.property('geneName'),
+		return 'Gene Name: ' + !Ember.isEmpty(this.get('model.geneName'));
+		
+	},
 	
 	init: function() {
         this.typing();
@@ -15,13 +16,13 @@ var TeaseMeController = Ember.Controller.extend({
         var _this = this;
  
         Ember.run.later(function() {
-            _this.set('genecode', 'model.nts');
+            _this.set('genecode', _this.geneName);
             _this.typing();
         }, 2000);
     },
 	
 	
-	genecode: new Date().toLocaleTimeString()
+	genecode: new Date().toLocaleTimeString()*/
 });
 
 export default TeaseMeController;

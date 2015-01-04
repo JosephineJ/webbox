@@ -2,13 +2,17 @@ import Ember from 'ember';
 
 var ghostTyperComponent = Ember.Component.extend({
 	
-	init: function() {
+	
+	
+	
+	/*init: function() {
         this.typing(this.text);
     },
  
     typing: function(text) {
 		
-		var _this = this;
+		console.log("typing..." + this.text);*/
+		/*var _this = this;
         var i = 0;
         var currentLetter ="";
         var len = text.length;
@@ -29,14 +33,14 @@ var ghostTyperComponent = Ember.Component.extend({
 			}*/
            // _this.typing(this.text);
            
-			}, 1000);
+			/*}, 1000);
 		
-			_this.typing(this.text);
-		}
+			_this.typing(this.text);*/
+		//}
 		
-		//repeat();
+		/*repeat();
         
-         
+         */
 
    
 
