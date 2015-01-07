@@ -49,7 +49,7 @@ var typing = function(seqData){
 	console.log(seqData);
 	
 	var chooseLetter = function(){
-		if (i != 5){
+		if (i <= len){
 			currentLetter = seqData.substring(i,i+1); 
 			code.innerText = code.textContent +=  currentLetter;
 			i++;
