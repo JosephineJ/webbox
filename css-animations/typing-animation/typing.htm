@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Typing Animation Vanilla Javascript</title>
+<style type="text/css">
+*{
+	font-size: 20px;
+	font-family: monospace, sans-serif;
+	color: #444444;
+}
+body{
+	text-align: center;
+}
+main{
+	width: 80%;
+	margin: 0 auto;
+	text-align: left;
+}
+.bio-code{
+    text-align: justify;
+    word-break: break-all;	
+}
+</style>
+</head>
+<body>
+	<main>
+		<section id="section">
+			<h1>Typing Animation in JS</h1>
+		</section>
+	</main>
+	<script type="text/javascript">
+var model = {
+	geneName: "Mono Oxidase A",
+	seq:"GACGTTCCAGCGGTAGAAATCACCCACACCTTCTGGGAAAGGAACCTGCCCTCTGTTTCTGGCCTGCTGAAGATCATTGGATTTTCCACATCAGTAACTGCCCTGGGGTTTGTGCTGTACAAATACAAGCTCCTGCCACGGTCTTGAAGTTCTGTTCTTATGCTCTCTGCTCACTGGTTTTCAATACCACCAAGAGGAAAAATATTGACAAGTTTAAAGGCTGTGTCATTGGGCCATGTTTAAGTGTACTGGATTTAACTACCTTTGGCTTAATTCCAATCATTGTTAAAGTAAAAACAATTCAAAGAATCACCTAATTAATTTCAGTAGATCAAGCTCCATCTTATTTGTCAGTGTAGATCACTCATGTTAATTGATAGAATAAAGCCTTGTGATCATTTCTGAAATTCACAAGTAACGTGTATGTGCTCATCAGAACS"	
+}
+console.log(model.geneName);
+console.log(model.seq);
+
+var section = document.getElementById("section");
+var code = document.createElement("p");
+code.className += "bio-code";
+section.appendChild(code);
+
+var typing = function(seqData){
+	
+	var i = 0;
+	var currentLetter = "";
+	var len = seqData.length;
+	console.log(seqData);
+	
+	var chooseLetter = function(){
+		if (i != 5){
+			currentLetter = seqData.substring(i,i+1); 
+			code.innerText = code.textContent +=  currentLetter;
+			i++;
+		}
+		else{
+			clearInterval(typingInterval);
+		}
+	 
+	}
+	
+	typingInterval = setInterval(chooseLetter, 20);	
+
+}
+
+typing(model.seq);
+
+
+
+
+
+</script>
+</body>
+</html>
