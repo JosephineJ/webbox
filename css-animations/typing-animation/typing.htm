@@ -60,11 +60,41 @@ var typing = function(seqData){
 	 
 	}
 	
-	typingInterval = setInterval(chooseLetter, 20);	
+	typingInterval = setInterval(chooseLetter, 200);	
 
 }
 
-typing(model.seq);
+var typingTwo = function(seqData){
+	
+	var i = 0;
+	var currentLetter = "";
+	var len = seqData.length;
+	console.log(seqData);
+	console.log("typingTwo");
+	
+	var chooseLetter = function(){
+		if (i <= len){
+			console.log("if");
+			currentLetter = seqData.substring(i,i+1); 
+			code.innerText = code.textContent +=  currentLetter;
+			i++;
+			window.setTimeout(chooseLetter,80);
+		}
+		else {
+			console.log("else");
+			return false;
+		}
+						
+	}
+	
+	chooseLetter();
+	
+}
+
+//typing(model.seq);
+typingTwo(model.seq);
+
+
 
 
 
