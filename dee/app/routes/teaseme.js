@@ -2,14 +2,20 @@ import Ember from 'ember';
 
 var TeaseMeRoute =  Ember.Route.extend({
 	
-	model: function() {
+	/*model: function() {
 		return this.store.find('teaseme');
-		//return ['red', 'yellow', 'blue'];
-	}
-	
-	/*setupController: function(controller, genes) {
-    controller.set('model', genes.get('nts'));
 	}*/
+	
+	setupController: function(controller, gene) {
+		controller.set('model', gene);
+	}
+  /*startWatchingTime: function(controller){
+    var self = this;
+    controller.set('currentTime', 'newTimeSet');
+    Ember.run.later(function(){
+      self.startWatchingTime(controller);
+    }, 1000);
+  }*/
 });
 
 
