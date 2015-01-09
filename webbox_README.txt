@@ -6,6 +6,7 @@ new techniques in HTML, CSS and Javascript and getting to know interesting frame
 
 Table of Contents:
 -css-animation-move-in
+   Slider animation using plain javascript; to be re-implemented in Ember.js
 -css-animations
 -dee
 -- Ember.js project built using ember-cli; used to teach myself the basics of ember and mvc frameworks in general.
