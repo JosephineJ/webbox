@@ -2,12 +2,14 @@ import Ember from 'ember';
 
 var TeaseMeRoute =  Ember.Route.extend({
 	
-	/*model: function() {
+	model: function() {
 		return this.store.find('teaseme');
-	}*/
+	},
 	
-	setupController: function(controller, gene) {
-		controller.set('model', gene);
+	setupController: function (controller, model) {
+    // Call _super for default behavior
+		this._super(controller, model);
+    // Implement your custom setup after
 	}
   /*startWatchingTime: function(controller){
     var self = this;

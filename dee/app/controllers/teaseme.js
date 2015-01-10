@@ -6,15 +6,21 @@ var TeaseMeController = Ember.ArrayController.extend({
 		this._super();
         this.chooseLetter();
     },
+    seqData: "GTCTCTA",
     i: 0,
-    seqData: "GTCTCTATAC",
-    len: 8,
+    /*seqData: function(){
+		var seq = this.get('model.nts');
+		return seq;
+	},*/
+    len:  6,
     currentLetter: "",   
     chooseLetter: function() {
 		var tthis = this;
+		var seqData = tthis.seqData;
 		if (tthis.i <= tthis.len){
 			console.log(tthis.i);
-			tthis.currentLetter = tthis.seqData.substring(tthis.i,tthis.i+1); 
+			console.log(seqData);
+			tthis.currentLetter = seqData.substring(tthis.i,tthis.i+1); 
 			//code.innerText = code.textContent +=  currentLetter;
 			console.log(tthis.currentLetter);
 			tthis.i++;	
