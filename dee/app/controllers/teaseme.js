@@ -13,7 +13,8 @@ var TeaseMeController = Ember.ArrayController.extend({
 		return seq;
 	},*/
     len:  6,
-    currentLetter: "",   
+    currentLetter: "",  
+    actions: { 
     chooseLetter: function() {
 		var tthis = this;
 		var seqData = tthis.seqData;
@@ -28,6 +29,7 @@ var TeaseMeController = Ember.ArrayController.extend({
 		}
 		else{
 			return false;
+		}
 		}
     },
 });

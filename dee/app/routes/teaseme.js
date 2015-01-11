@@ -4,13 +4,13 @@ var TeaseMeRoute =  Ember.Route.extend({
 	
 	model: function() {
 		return this.store.find('teaseme');
-	},
+	}//,
 	
-	setupController: function (controller, model) {
+	//setupController: function (controller, model) {
     // Call _super for default behavior
-		this._super(controller, model);
+		//this._super(controller, model);
     // Implement your custom setup after
-	}
+	//}
   /*startWatchingTime: function(controller){
     var self = this;
     controller.set('currentTime', 'newTimeSet');
