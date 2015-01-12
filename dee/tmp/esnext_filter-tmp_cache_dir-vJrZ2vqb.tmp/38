@@ -1,0 +1,46 @@
+import Ember from 'ember';
+
+var TeaseMeController = Ember.ArrayController.extend({
+	
+	init: function() {
+		this._super();
+		this.get('nts');
+		this.set('nts','');
+        this.chooseLetter();
+    },
+    seqData: "GTCTCTA",
+    i: 0,
+    /*seqData: function(){
+		var seq = this.get('model.nts');
+		return seq;
+	},*/
+    len:  6,
+    currentLetter: "",
+    nts: function() {
+		this._super();
+		return this.store.get('nts');
+	},  
+    chooseLetter: function() {
+		var tthis = this;
+		//var seqData = tthis.seqData;
+		var seqData = tthis.nts;
+		if (tthis.i <= tthis.len){
+			console.log(tthis.i);
+			console.log(seqData);
+			tthis.currentLetter = seqData.substring(tthis.i,tthis.i+1); 
+			//code.innerText = code.textContent +=  currentLetter;
+			console.log(tthis.currentLetter);
+			console.log(tthis.nts);
+			this.set('nts',tthis.currentLetter);
+			tthis.i++;	
+			Ember.run.later(function() {tthis.chooseLetter();}, 300);		
+		}
+		else{
+			return false;
+		}
+	},
+});
+
+export default TeaseMeController;
+
+
