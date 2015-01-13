@@ -1,0 +1,167 @@
+<!DOCTYPE>
+<html>
+<head>
+	<title>Rotating Character Profile</title>
+	<style type="text/css">
+		@keyframes rot-2{
+			from{
+				
+			}
+			to{
+			-webkit-transform: translate(100px) rotate(180deg);
+			-webkit-transform-origin: 90% 100%;	
+
+			-o-transform:translate(100px) rotate(180deg); 
+			-o-transform-origin:90% 100%;	
+
+			transform: translate(100px) rotate(180deg);
+			transform-origin: 90% 100%;	
+			
+			-webkit-transform: matrix(1.1, 1.8, -0.5, 1, 0, 1);
+			-o-transform: matrix(1.1, 1.8, -0.5, 1, 0, 1);
+			transform: matrix(1.1, 1.8, -0.5, 1, 0, 1);
+			
+			width: 200%;
+			height: 600px;
+			left: 300px;
+			top: 30%;
+			}
+			
+		}
+		@keyframes rot-1{
+			0%{
+			-webkit-transform: translate(-1200px) rotate(-270deg);
+			-webkit-transform-origin: 80% 100%;	
+
+			-o-transform:translate(-1200px) rotate(-270deg);
+			-o-transform-origin:80% 100%;	
+
+			transform: translate(-1200px) rotate(-270deg);
+			transform-origin: 80% 100%;	
+			}
+			60%, 100%{
+			-webkit-transform: translate(0) rotate(0);
+			-webkit-transform-origin: 0% 0%;	
+
+			-o-transform:translate(0) rotate(0);
+			-o-transform-origin: 0% 0%;	
+
+			transform: translate(0) rotate(0);
+			transform-origin: 0% 0%;		
+			
+			}	
+			70%{
+			-webkit-transform: translate(0) rotate(0);
+			-webkit-transform-origin: 0% 0%;	
+
+			-o-transform:translate(-1200px) rotate(-270deg);
+			-o-transform-origin:50% 100%;	
+
+			transform: translate(50px) rotate(60deg);
+			transform-origin: 10% 10%;
+				
+			}		
+			
+			}
+			
+			@keyframes woosh{
+				from {
+					left: 780px;
+				}
+				to{
+					left: 0;
+				}
+				
+			}
+		#wrapper{
+			background-color: #474747;
+			width: 80%;
+			height: 660px;
+			text-align: center;
+			overflow: hidden;
+			margin: 0 auto;
+			position: relative;
+		}
+		.bg-1{
+			width: 0;
+			height: 0;
+			border-bottom: 500px solid #ffee10;
+			border-left: 1500px solid transparent;
+			margin: 0 auto;
+			position: absolute;
+			bottom: 0;
+			left: 0;
+			z-index: 2;
+			-webkit-animation: rot-1 0.8s ease-in  0s 1 normal forwards;
+			-moz-animation: rot-1 0.8s ease-in  0s 1 normal forwards;
+			-o-animation: rot-1 0.8s ease-in  0s 1 normal forwards;
+			animation: rot-1 0.8s ease-in  0s 1 normal forwards;
+		}
+		.bg-2{
+			background-color: #ddfe11;
+			min-height: 45%;
+			margin: 25% auto 0;
+			position: relative;
+			-webkit-animation: rot-2 0.6s ease-out 0s 1 normal forwards;
+			-moz-animation: rot-2 0.6s ease-out 0s 1 normal forwards;
+			-o-animation: rot-2 0.6s ease-out 0s 1 normal forwards;
+			animation: rot-2 0.6s ease-out 0s 1 normal forwards;
+		}
+		.bg-2.up{
+			-webkit-transform: translate(100px) rotate(180deg);
+			-webkit-transform-origin: 60% 100%;
+
+			-o-transform:translate(100px) rotate(180deg); 
+			-o-transform-origin:60% 100%;
+
+			transform: translate(100px) rotate(180deg);
+			transform-origin: 80% 100%;	
+			
+			-webkit-transform: matrix(0.9, 1.5, 0, 1, 0, 1);
+			-o-transform: matrix(0.9, 1.5, 0, 1, 0, 1);
+			transform: matrix(0.9, 1.5, 0, 1, 0, 1);
+			
+			width: 142%;
+			height: 70%;
+
+			
+		}
+		
+		.bg-1.up{
+			-webkit-transform: translate(100px) rotate(180deg);
+			-webkit-transform-origin: 60% 100%;
+
+			-o-transform:translate(100px) rotate(180deg); 
+			-o-transform-origin:60% 100%;
+
+			transform: translate(-1200px) rotate(-270deg);
+			transform-origin: 80% 100%;						
+		}
+		.char{
+			background-color: transparent;
+			background-image: url('char_kimcut.png');
+			background-repeat: no-repeat;
+			background-position: 0 center;
+			background-attachment: scroll;
+			position: relative;
+			left: 780px; top: -470px;
+			min-height: 600px;
+			-moz-animation: woosh 0.4s ease-in-out 0.5s 1 normal forwards;
+			-o-animation: woosh 0.4s ease-in-out 0.5s 1 normal forwards;
+			animation: woosh 0.4s ease-in-out 0.8s 1 normal forwards;
+		}
+	
+	</style>
+</head>
+<body>
+	<main id="wrapper">
+		<div class="bg-1 up"></div>
+		<div class="bg-2"></div>
+		<div class="char"></div>
+	</main>
+
+<script type="text/javascript">
+
+</script>
+</body>
+</html>
