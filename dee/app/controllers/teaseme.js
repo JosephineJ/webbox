@@ -24,13 +24,18 @@ var TeaseMeController = Ember.ArrayController.extend({
 		return 3;
 		//return "GTATATCTCT";
 	}.property('nts'),*/
-	len: 7,
+	len: function(){
+		var slen = this.get('nts');
+			return slen.length;
+	}.property('nts'),
+	//len: 7,
     currentLetter: "", 
     chooseLetter: function() {
 		var tthis = this;
 		//var seqData = tthis.seqData;
 		var seqData = tthis.nts;
-		if (tthis.i <= tthis.len){
+		var lenn = this.get('len');
+		if (tthis.i <= lenn){
 			console.log(tthis.i);
 			tthis.currentLetter = seqData.substring(tthis.i,tthis.i+1); 
 			//code.innerText = code.textContent +=  currentLetter;
@@ -49,5 +54,3 @@ var TeaseMeController = Ember.ArrayController.extend({
 });
 
 export default TeaseMeController;
-
-
