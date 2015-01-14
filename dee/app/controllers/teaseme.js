@@ -6,7 +6,13 @@ var TeaseMeController = Ember.ArrayController.extend({
 		this._super();
         this.chooseLetter();
     },
-    growingCode: "",
+    _growingCode: "",
+   /* growingCode: Ember.computed(
+		function(){
+			//var modell = this.get('model.nts');
+			return this.set('growingCode');
+		}
+    ), */
     i: 0,
     /*seqData: function(){
 		var seq = this.get('model.nts');
@@ -29,11 +35,12 @@ var TeaseMeController = Ember.ArrayController.extend({
 			tthis.currentLetter = seqData.substring(tthis.i,tthis.i+1); 
 			//code.innerText = code.textContent +=  currentLetter;
 			console.log(tthis.currentLetter);
-			tthis.growingCode += tthis.currentLetter;
-			console.log(tthis.growingCode);
-			this.set('growingCode',tthis.growingCode);
+			tthis._growingCode += tthis.currentLetter;
+			console.log(tthis._growingCode);
+			this.set('growingCode',tthis._growingCode);
+			//tthis.set('_growingCode',"A");
 			tthis.i++;	
-			Ember.run.later(function(){tthis.chooseLetter();}, 1800);		
+			Ember.run.later(function(){tthis.chooseLetter();}, 400);		
 		}
 		else{
 			return false;
