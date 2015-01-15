@@ -1,0 +1,63 @@
+import Ember from 'ember';
+
+var TeaseMeController = Ember.ArrayController.extend({
+	
+	init: function() {
+		this._super();
+        this.chooseLetter();
+    },
+    _growingCode: "",
+   /* growingCode: Ember.computed(
+		function(){
+			//var modell = this.get('model.nts');
+			return this.set('growingCode');
+		}
+    ), */
+    i: 0,
+    /*seqData: function(){
+		var seq = this.get('model.nts');
+		return seq;
+	},*/
+    //nts: "GTATCTATCTATCTGTGCTCGATGATATATA", 
+    nnts:  function(){
+		var model =  this.get('model');
+		var seq = model.get('nts');
+		return model;
+	}.property('model.nts'),
+    /*len: function(){
+		this._super();
+		return 3;
+		//return "GTATATCTCT";
+	}.property('nts'),*/
+	len: function(){
+		var slen = this.get('nts');
+			return slen.length;
+	}.property('nts'),
+	//len: 7,
+    currentLetter: "", 
+    chooseLetter: function() {
+		var tthis = this;
+		//var seqData = tthis.seqData;
+		var seqData = tthis.nnts;
+		var lenn = this.get('len');
+		if (tthis.i <= lenn){
+			console.log(tthis.i);
+			tthis.currentLetter = seqData.substring(tthis.i,tthis.i+1); 
+			//code.innerText = code.textContent +=  currentLetter;
+			console.log(tthis.currentLetter);
+			tthis._growingCode += tthis.currentLetter;
+			console.log(tthis._growingCode);
+			this.set('growingCode',tthis._growingCode);
+			//tthis.set('_growingCode',"A");
+			tthis.i++;	
+			Ember.run.later(function(){tthis.chooseLetter();}, 200);		
+		}
+		else{
+			return false;
+		}
+	},
+});
+
+export default TeaseMeController;
+
+

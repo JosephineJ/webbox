@@ -1,0 +1,27 @@
+import Ember from 'ember';
+
+var TeaseMeRoute =  Ember.Route.extend({
+	
+	model: function() {
+		return this.store.find('teaseme');
+	}/*,
+	setupController: function(controller, seqs) {
+		controller.set('model', seqs.get('nts'));
+	}*/
+	
+	//setupController: function (controller, model) {
+    // Call _super for default behavior
+		//this._super(controller, model);
+    // Implement your custom setup after
+	//}
+  /*startWatchingTime: function(controller){
+    var self = this;
+    controller.set('currentTime', 'newTimeSet');
+    Ember.run.later(function(){
+      self.startWatchingTime(controller);
+    }, 1000);
+  }*/
+});
+
+
+export default TeaseMeRoute;
