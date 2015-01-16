@@ -32,6 +32,35 @@ $gp: "";
 		}
 	}
 }
+.clip{
+	color: $light-1;
+	width: $pad-2;
+	background-color: $bg-color-2;
+	padding: $pad-1/3;
+	position: relative;
+	top: -$pad-1;
+	border-radius: $brad;
+	cursor: pointer;
+	transition: transform 0.3s ease-in;
+	
+	@media screen and (min-width: $desk) {	
+		margin-left: $pad-1;
+	}
+	
+	&:hover{
+		color: $light-3;
+	}
+	
+	.clipped-down &{
+		transform: rotate(180deg);
+		
+		.fa-sort-desc{
+			/*transition: line-height 0.3s ease-in;*/
+			line-height: $brad;
+		}
+	}
+}
+
 
 
 /* Main Parts */
@@ -146,31 +175,6 @@ $gp: "";
 		color: $bg-color-1;
 	}
 }
-/*.ghost-phrase{
-	font-size: $fs-2;
-	color: $light-1;
-	font-style: italic;
-	padding-right: $mar-1 *4;
-	text-align: right;
-	
-	& + &{
-		padding-right: $mar-1 *2;
-	}
-		& + & + &{
-		padding-right: $mar-1;
-	}	
-	@media screen and (min-width: $tab){
-	&{
-		padding-right: $mar-1 * 8;
-	}
-		& + &{
-		padding-right: $mar-1 *4;
-	}
-		& + & + &{
-		padding-right: $mar-1 * 2;
-	}	
-	}	
-} */
 
 .ghost-phrase{
 	font-size: $fs-3;
@@ -203,6 +207,9 @@ $gp: "";
 	background-color: $bg-color-2;
 	
 	.bio-code{
+	
+	
+	    .nucleotides, .genename{
 		color: $light-1;
 		font-size: $fs-4;
 		font-weight: 800;
@@ -212,6 +219,8 @@ $gp: "";
 		text-align: justify;
 		word-break: break-all;
 		text-justify: inter-word;
+		}
+		
 		
 		.typing-rod{
 			border-width: 2px;

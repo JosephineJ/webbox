@@ -1,5 +1,5 @@
 <div class="wrapper">
-<header class="top-header">
+{{#view 'togglemenu'}}<header class="top-header">
 <nav class="main-nav">
 {{#link-to 'news'}}Start{{/link-to}}
 {{#link-to 'comic.intro'}}Comic{{/link-to}}
@@ -8,6 +8,7 @@
 {{#link-to 'contact'}}Contact{{/link-to}}
 </nav>
 </header>
+<div class="clip">{{fa-icon "fa-sort-desc" size=2}}</div>{{/view}}
 <main class="main-section">
 {{outlet}}
 </main>

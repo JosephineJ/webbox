@@ -24,7 +24,8 @@ $mar-3: 63px;
 $mar-4: 84px;
 $mar-5: 105px;
 
-/* Margins */
+/* Radius and Other */
+$brad: 8px;
   
 /* C2. Mixins */  
 @mixin vendor($attr, $argument) {
