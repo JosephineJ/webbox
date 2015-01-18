@@ -162,15 +162,22 @@ $gp: "";
 	}
 }
 .slider-frame{
+	height: $height-min *1.5;
 	overflow: hidden;
+	
+	@media screen and (min-width: $tab){
+		height: $height-min;
+	}
 }
 .slide-roll{
-	width: 300%;
+	width: 100%;
+	height: 200%;
 }
 .intro-slide{
 	width: 100%;
-	min-height: $height-min;
-	display: inline;
+	/*min-height: $height-min;*/
+	height: 50%;
+	display: block;
 	
 	p{
 		font-size: $fs-2;

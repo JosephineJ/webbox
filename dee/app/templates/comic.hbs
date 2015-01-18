@@ -1,9 +1,9 @@
-<div class="slider-frame row-row">
+<div class="slider-frame row">
 <div class="slide-roll">
 {{#each}}
 <section class="intro-slide">
-<div class="center-box row-row">
-	<div class="part-2 row-col">
+<div class="center-box row">
+	<div class="part-2 row">
 			<h3 class="ghost-phrase part-1">{{title}}</h3>
 			<h3 class="ghost-phrase part-1">{{title}}</h3>
 			<h3 class="ghost-phrase part-1">I just cannot help myself and the carpet made the room so comfortable.</h3>
@@ -12,9 +12,9 @@
 		<div class="content-box-fill">
 			<p>{{short-abstract articleContent}}
 			{{#link-to 'news'}}more{{/link-to}}</p>
-			<nav class="row-row">
-				{{#view 'slidefwd'}}<div class="part-1 slidernav">{{fa-icon "arrow-circle-left" size=2}}</div>{{/view}}
-				{{#view 'slidefwd'}}<div class="part-1 right slidernav">{{fa-icon "arrow-circle-right" size=2}}</div>{{/view}}
+			<nav class="row">
+				{{#view 'slidefwd'}}<div class="part-1 right slidernav">{{fa-icon "arrow-circle-up" size=2}}</div>{{/view}}
+				{{#view 'slidefwd'}}<div class="part-1 right slidernav">{{fa-icon "arrow-circle-down" size=2}}</div>{{/view}}
 			</nav>
 		</div>
 	</div>
