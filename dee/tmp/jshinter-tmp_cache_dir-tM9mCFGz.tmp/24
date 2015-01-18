@@ -1,0 +1,4 @@
+module('JSHint - views');
+test('views/slidefwd.js should pass jshint', function() { 
+  ok(false, 'views/slidefwd.js should pass jshint.\nviews/slidefwd.js: line 6, col 9, \'$\' is not defined.\n\n1 error'); 
+});

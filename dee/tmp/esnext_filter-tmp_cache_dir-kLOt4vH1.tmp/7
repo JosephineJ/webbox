@@ -1,0 +1,82 @@
+import Ember from 'ember';
+
+var TeaseMeController = Ember.ArrayController.extend({
+	
+	init: function() {
+		this._super();
+		this.growingCode = "C"; /*Insert first character of used model 
+		string here, as chooseLetter will return undefined in first 
+		execution round instead */
+        this.chooseLetter();
+    },
+    _growingCode: "",
+    i: 0,
+    j: 0,
+    nnts:  function() {
+		var model = "";
+		this.get('content').forEach(function(item) {
+			model += item.get('nts');
+		});
+		return model;
+	}.property('content'),
+	len: function() {
+		var slen = this.get('nnts');
+			return slen.length;
+	}.property('nnts'),
+    currentLetter: "", 
+    chooseLetter: function() {
+		var tthis = this;
+		var timeint = 4000;
+		var seqData = this.get('nnts');
+		var lenn = this.get('len');
+		var i = this.get('i');
+		if (i <= 80 && i > 0){
+			timeint = 300 - i*3;
+		}
+		else{
+			timeint = 10;
+		}
+		var currentLetter = "";
+		var growingCode = this.get('growingCode');
+		console.log("model obj: " + this.get('content'));
+		console.log("sequence: " + seqData);
+		if (i <= lenn){
+			console.log(i);
+			currentLetter = seqData.substring(i,i+1); 
+			console.log(currentLetter);
+			growingCode += currentLetter;
+			console.log(growingCode);
+			this.set('growingCode', growingCode);
+			this.incrementProperty('i');
+			//this.set('i', this.get('i')+1);
+			Ember.run.later(function() {tthis.chooseLetter();}, timeint);		
+		}
+		else{
+			Ember.run.later(function() {	
+				tthis.chooseLetterMotto();
+			}, 2500);
+			return false;
+		}
+	},
+	chooseLetterMotto: function() {
+		var tthis = this;
+		var j = this.get('j');
+		var motto = "Icannotlose.";
+		var len  = motto.length;
+		var growingCode = this.get('growingCode');
+		if (j <= len){
+			growingCode += motto.substring(j,j+1);
+			tthis.set('growingCode', growingCode);
+			this.incrementProperty('j');
+			Ember.run.later(function() {tthis.chooseLetterMotto();}, 500 + 
+			j*25);
+		}
+		else{
+			return false;
+		}
+	},
+});
+
+export default TeaseMeController;
+
+
