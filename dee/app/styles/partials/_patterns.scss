@@ -191,12 +191,16 @@ $gp: "";
 		}
 	}
 	
-	&:first-child .fa-arrow-circle-up{
-		font-size: 0em;
+	&:first-child .fa-arrow-circle-up,	
+	&:last-child .fa-arrow-circle-down{
+		font-size: 3em;
+		line-height: 0.2em;
+		cursor: default;
 	}
 	
-	&:last-child .fa-arrow-circle-down{
-		font-size: 0em;
+	&:first-child .fa-arrow-circle-up:before,	
+	&:last-child .fa-arrow-circle-down:before{
+		content:".";
 	}
 	
 	p{
