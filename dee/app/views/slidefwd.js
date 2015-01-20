@@ -1,30 +1,20 @@
 import Ember from 'ember';
 
 var slideFwdView =  Ember.View.extend({
-	/*current: function(){
-		var currentPos = Ember.$(".slide-roll").css("top");
-		console.log(currentPos);
-		return currentPos;		
-	}, */
-	i: 1,
-	click: function() {
-//Ember.$(".slide-roll").css({"top":"-100%"});
-		//alert("ClickableView was clicked!");
-		var current = Ember.$(".slide-roll").css("top");
-		if (current == "0px"){
-			current = "-100%";
+	click: function(event) {
+		var curSlide = Ember.$(event.target).closest(".intro-slide").index() +1;
+		var maxSlides = Ember.$(".intro-slide").length;
+		if (curSlide === maxSlides){
+			console.log("Last Slide reached.");
+			return false;
 		}
 		else{
-			current = Ember.$(".slide-roll").style.top;
+			var top = (curSlide) * -100;
+			console.log(top);
+			var val = top + "%";
+			console.log(val);
+			Ember.$(".slide-roll").css({"top": val });
 		}
-		//var current = -100;
-		var i = this.get('i');
-		console.log(current + ' ' + i);
-		var top = i * parseInt(current);
-		//Ember.$(".slide-roll").css({"top": function(current) { return (parseInt(current) - 100 + "%" || 100 + "%"); }});
-		Ember.$(".slide-roll").css({"top": top + "%" });
-		this.incrementProperty('i');
-		console.log(top);
 	}
 	
 });
