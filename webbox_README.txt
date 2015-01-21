@@ -12,7 +12,10 @@ Table of Contents:
 -- Ember.js project built using ember-cli; used to teach myself the basics of ember and mvc frameworks in general.
     Contains a Start-Page showing blog post abstracts linking to the original posts, a simple header and footer section
     and other gimmicks like an up-to-date clock-route.
-    To be done: Slider route as intro page for comic resource, Typing animation on start page using data from model
+    Finished subtasks:
+    - Typing animation on start page using data from model
+    - slider route as intro page for comic resource
+    To be done: Header for Character section, Main Character Page with links to Character Subpages, Character Subpages themselves
 -grid-page
 -html5-template-fiddle
 -pong
