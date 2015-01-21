@@ -12,7 +12,9 @@ Router.map(function() {
 	});
 	this.resource('news-item', {path: '/news/:news_id'});
 	//this.route("comic", { path: "/comic" });
-	this.route("chars", { path: "/chars" });
+	this.resource("chars", { path: "/chars" }, function(){
+		this.route('charsmain');
+	});
 	this.route("about", { path: "/about" });
 	this.route("contact", { path: "/contact" });
 	this.resource('comic', { path: '/comic' }, function() {

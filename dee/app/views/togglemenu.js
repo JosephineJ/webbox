@@ -2,8 +2,9 @@ import Ember from 'ember';
 
 export default Ember.View.extend({
 	tagName: 'div',
-	classNameBindings: ['clippedDown'],
+	classNameBindings: ['clippedDown','headerview'],
 	clippedDown: false,
+	headerview: true,
 	click: function(){
 		this.set('clippedDown', !this.get('clippedDown'));
 		Ember.$('.main-nav').slideToggle(320);
