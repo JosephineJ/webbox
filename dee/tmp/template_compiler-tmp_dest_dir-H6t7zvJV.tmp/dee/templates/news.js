@@ -1,0 +1,42 @@
+import Ember from 'ember';
+export default Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  var buffer = '', stack1, helperMissing=helpers.helperMissing, escapeExpression=this.escapeExpression, self=this;
+
+function program1(depth0,data) {
+  
+  var buffer = '', stack1, helper, options;
+  data.buffer.push("\n<section class=\"fullsize\">\n<div class=\"center-box row-col\">\n	<div class=\"part-1\">\n		<h2 class=\"news-title\">");
+  stack1 = helpers._triageMustache.call(depth0, "title", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</h2>\n	</div>\n	<div class=\"part-1\">\n		<div class=\"content-box\">\n			<p>");
+  data.buffer.push(escapeExpression((helper = helpers['short-abstract'] || (depth0 && depth0['short-abstract']),options={hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data},helper ? helper.call(depth0, "articleContent", options) : helperMissing.call(depth0, "short-abstract", "articleContent", options))));
+  data.buffer.push("\n			");
+  stack1 = (helper = helpers['link-to'] || (depth0 && depth0['link-to']),options={hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(2, program2, data),contexts:[depth0,depth0],types:["STRING","ID"],data:data},helper ? helper.call(depth0, "news-item", "id", options) : helperMissing.call(depth0, "link-to", "news-item", "id", options));
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n		</div>\n	</div>\n</div>\n</section>\n");
+  return buffer;
+  }
+function program2(depth0,data) {
+  
+  
+  data.buffer.push("more");
+  }
+
+  data.buffer.push("<section class=\"fullsize\">\n<div class=\"center-box row-colrow\">\n<div class=\"part-1\">\n<h1 id='title'>Welcome to Dee</h1>\n</div>\n<div class=\"part-1\">\n	<div class=\"content-box\">\n		<p>Tell me more, tell me more....</p>\n	</div>\n</div>\n</div>\n</section>\n");
+  stack1 = helpers.each.call(depth0, {hash:{},hashTypes:{},hashContexts:{},inverse:self.noop,fn:self.program(1, program1, data),contexts:[],types:[],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n<section class=\"fullsize\">\n<div class=\"center-box row-row\">\n<div class=\"part-1\">\n<p>Public: ");
+  stack1 = helpers._triageMustache.call(depth0, "public", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n</div>\n<div class=\"part-1\">\n<p>Private: ");
+  stack1 = helpers._triageMustache.call(depth0, "private", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("</p>\n</div>\n</div>\n</section>\n\n");
+  stack1 = helpers._triageMustache.call(depth0, "outlet", {hash:{},hashTypes:{},hashContexts:{},contexts:[depth0],types:["ID"],data:data});
+  if(stack1 || stack1 === 0) { data.buffer.push(stack1); }
+  data.buffer.push("\n");
+  return buffer;
+  
+});

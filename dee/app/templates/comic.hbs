@@ -1,13 +1,13 @@
 <div class="slider-frame row">
 <div class="slide-roll">
 {{#each}}
-<section class="intro-slide">
-<div class="center-box row-row">
+<section class="intro-slide active row-col">
+<div class="center-box row-colrow">
 	<div class="part-1 row">
-			<h2 class="ghost-phrase part-1">I just cannot help myself and the carpet made the room so comfortable.</h2>
+			<!-- <h2 class="ghost-phrase part-1">I just cannot help myself and the carpet made the room so comfortable.</h2> -->
 	</div>
 	<div class="part-2">
-		<div class="content-box-fill">
+		<div class="content-box-fill description">
 			<p>{{short-abstract articleContent}}
 			{{#link-to 'news'}}more{{/link-to}}</p>
 			<nav class="row">
@@ -18,7 +18,11 @@
 	</div>
 </div>
 <div class="center-box row-row">
-			<h1 class="ghost-subline part-1">{{title}}</h1>
+<hgroup class="ghost-lines part-1">
+			<h1 class="ghost-subline gs-1">{{titlePartOne}}</h1>
+			<h2 class="ghost-subline gs-2">{{titlePartTwo}}</h2>
+			<h2 class="ghost-subline gs-3">{{titlePartThree}}</h2>
+			</hgroup>
 </div>
 </section>
 {{/each}}

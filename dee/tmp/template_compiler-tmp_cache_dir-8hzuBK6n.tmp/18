@@ -1,0 +1,10 @@
+import Ember from 'ember';
+export default Ember.Handlebars.template(function anonymous(Handlebars,depth0,helpers,partials,data) {
+this.compilerInfo = [4,'>= 1.0.0'];
+helpers = this.merge(helpers, Ember.Handlebars.helpers); data = data || {};
+  
+
+
+  data.buffer.push("<section class=\"contactpage\">\n<div class=\"row-col fullsize\">\n	<div class=\"center-box\">\n		<div class=\"part-1\">\n			<h1>Impressum</h1>\n			<p class=\"mt-1\">Josephine J</p>\n			<p>Dreamstreet 21</p>\n			<p>10369 Berlin</p>\n			<p>Germany</p>\n		</div>\n		<div class=\"part-1\">\n		</div>\n	</div>\n</div>\n</section>\n");
+  
+});

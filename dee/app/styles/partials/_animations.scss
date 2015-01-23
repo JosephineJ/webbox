@@ -7,6 +7,17 @@
 	100%{
 		opacity:0;}
 }
+@keyframes ghost-fade{
+	0%{
+		opacity: 0; }	
+	50% {
+		margin-top: -4%;
+		opacity: 0.3;	}	
+		
+	100%{
+		margin-top: 0;
+		opacity:1;}
+}
 @keyframes fade-in-2{
 	0%{
 		opacity: 0; }	
