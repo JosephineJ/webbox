@@ -395,6 +395,8 @@ $gp: "";
 	
 	.bio-code{
 	
+		min-height: $height-min;
+	
 	
 	    .nucleotides, .genename{
 		color: $light-1;
@@ -424,6 +426,14 @@ $gp: "";
 			animation-name: blink;
 			animation-iteration-count: infinite;
 			animation-direction: normal;	
+		}
+		
+		a, .button{
+			display:none;
+		}
+		
+		.show-button{
+			display: block;
 		}
 	}
 	

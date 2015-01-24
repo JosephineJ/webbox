@@ -1,0 +1,4 @@
+module('JSHint - controllers');
+test('controllers/teaseme.js should pass jshint', function() { 
+  ok(false, 'controllers/teaseme.js should pass jshint.\ncontrollers/teaseme.js: line 11, col 36, \'chooseLetter\' is not defined.\n\n1 error'); 
+});
