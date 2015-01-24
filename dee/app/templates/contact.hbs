@@ -10,18 +10,21 @@
 	<div class="center-box row-colrow">
 		<div class="part-2">
 			<div class="contactform">
-				<div><input name="name" placeholder="Your Name" autocomplete="on" required /></div>
-				<div><input name="e-mail" placeholder="E-Mail Adress" autocomplete="on" required /></div>
-				<div><input name="subject" placeholder="Your message subject" autocomplete="on" required /></div>
-				<div><textarea name="textarea" rows="5" cols="70" placeholder="Your Message" required></textarea></div>
-				<div><a href="#" onclick="" class="button wide">Send</a></div>
+				<div><input name="name" placeholder="Your Name" autocomplete="on" id="myname" required {{bind-attr readonly=messageSent}}/></div>
+				<!-- <div><input name="e-mail" placeholder="E-Mail Adress" autocomplete="on" required {{bind-attr readonly=messageSent}}/></div> -->
+				<div class="spamchecker"><input name="url" placeholder="Leave this empty" id="spamchecker" autocomplete="on" /></div>
+				<div><input name="subject" placeholder="Your message subject" autocomplete="on" id="mysubject" required {{bind-attr readonly=messageSent}}/></div>
+				<div><textarea name="textarea" rows="5" cols="70" placeholder="Your Message" id="mymessage" required {{bind-attr readonly=messageSent}}></textarea></div>
+				{{#view 'contactsendform' class="button wide"}}{{contactButtonText}}{{/view}}
 			</div>
 		</div>
 		<div class="explain part-1">
 			<div class="">
-				<p>{{fa-icon "check" size=1}} Lorem lirem upsum</p>
-				<p>{{fa-icon "check" size=1}} Lorem ipsum lorem ipsum</p>
-				<p>{{fa-icon "check" size=1}} Lorem ipsum lorem ipsum</p>
+				<p>{{fa-icon "check" size=1}} Fill out the form with your name, subject and message</p>
+				<p>{{fa-icon "check" size=1}} Hit the <strong>Send</strong> button below the form</p>
+				<p>{{fa-icon "check" size=1}} The message will be generated in your e-mail client automatically. You just need to hit the send
+				button in your now opening mail client.</p>
+				<p class="mt-1">No e-mail client installed yet? Then just send me an e-mail at foo@bar.com using the web e-mail client of your choice.</p>
 			</div>
 		</div>
 	</div>
