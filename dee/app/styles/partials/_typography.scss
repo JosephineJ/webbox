@@ -89,17 +89,25 @@ $lh-3: 42px;
 p, a, li, span {
 
 	@include font;
-	font-size: $fs-1;
+	font-size: $fs-2;
 	line-height: $lh-1;
 
 }
 a{
-	.fullsize &{
+
+	p > &, .fullsize &{
+		font-weight:  bold;
 		text-decoration: none;
+		
+		&:hover{
+			color: $bg-color-4;		
+		}
 	}
+	
 }
-p > a{
+a.link{
 	&:link{
+		text-decoration: underline;
 		color: $linkblue;
 	}	
 	

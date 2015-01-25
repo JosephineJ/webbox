@@ -3,8 +3,12 @@ $gp: "";
 
 /* Helper classes */
 /*Margins*/
-.mt-1{
- margin-top: $mar-1;
+@for $num from 1 through 9{	
+	
+	.mt-#{$num}{
+		margin-top: $mar-1 *  $num;
+	}
+	
 }
 /*Colors*/
 .color-1{
@@ -15,6 +19,21 @@ $gp: "";
 }
 .color-3{
 	color: $color-3;
+}
+.glass{
+	background-color: $glass;
+}
+.mist{
+	background-color: $mist;
+}
+.veil{
+	background-color: $veil;
+}
+.milk{
+	background-color: $milk;
+}
+.cotton{
+	background-color: $cotton;
 }
 
 /* Navigation */
@@ -124,13 +143,13 @@ $gp: "";
 
 /* Main Parts */
 .wrapper{
-	background-color: $bg-color-1;
+	background-color: $bg-color-4;
 }
 .main-section{
 	@include centered;
 	@include flex-col;
 	//width: $width-main;
-	background-color: $bg-color-1;
+	background-color: $glass;
 }
 /* Footer */
 .main-footer{
@@ -193,7 +212,7 @@ $gp: "";
 	}
 }
 /* Buttons */
-.button{
+a.button, .button{
 	color: $color-1;
 	width: $mar-2 * 4;
 	display: block;
@@ -205,10 +224,11 @@ $gp: "";
 	padding: $pad-1;
 	background-color: transparent;
 	border: 6px solid $bg-color-4;
+	border-radius: 3px;
 	transition: all 0.3s ease-in;
 	
 	&:hover{
-		color: $bg-color-1;
+		color: $color-3;
 		background-color: $bg-color-4;
 	}
 }
@@ -216,13 +236,22 @@ $gp: "";
 .content-box{
 	border-style: solid;
 	border-width: 3px;
-	border-color: $light-1;
+	border-color: $dark-1;
 	border-radius: 3px;
 	padding: $pad-1;
+	background-color: $bg-color-3;
+	
+	p,a{
+		color: $color-3;
+	}
 	
 	.fullsize:nth-child(2n+2) &{
-		border-color: $dark-1;
-		background-color: $bg-color-1;
+		border-color: $light-1;
+		background-color: $milk;
+		
+		p,a{
+		color: $color-1;
+		}
 	}
 }
 .content-box-fill{
@@ -256,12 +285,32 @@ $gp: "";
 	display: block;
 	position: relative;
 	
-	&:nth-child(2n+1) .content-box-fill{
-		background-color: $bg-color-3;
+	.emptypart{
+			order:2;
+	}
 		
-		p, .slidernav{
-			color: $bg-color-1;
+	.contentpart{
+			order:1;
+	}
+	
+	&:nth-child(2n+1) {
+	
+		.content-box-fill{
+			background-color: $bg-color-3;
+		
+			p, .slidernav{
+				color: $bg-color-1;
+			}
 		}
+		
+		.emptypart{
+			order:1;
+		}
+		
+		.contentpart{
+			order:2;
+		}
+		
 	}
 	
 	&:first-child .fa-arrow-circle-up,	
@@ -284,6 +333,10 @@ $gp: "";
 	.slidernav i{
 		cursor: pointer;
 		transition: font-size 0.3s ease-in;	
+		
+		&:hover{
+			color: $bg-color-4;
+		}
 	}
 	
 	.description{
@@ -331,6 +384,7 @@ $gp: "";
 	}
 
 .ghost-lines{
+	color: $color-1;
 	position: absolute;
 	width: $width-main-desk;
 	opacity: 0;
@@ -347,6 +401,22 @@ $gp: "";
 		width: $width-half-desk;
 	}
 	
+	.intro-slide:nth-child(2n+1) &{
+		@media screen and (min-width: $tab){
+			left: $width-half-desk/4;
+			width: $width-half-desk;
+		}	
+		
+		.ghost-subline{
+		
+		@media screen and (min-width: $tab){
+			text-align: left;
+		}
+		
+		
+		}		
+	}
+	
 	&.wipe-up{
 		top: -10%;
 		opacity: 0.5;	
@@ -355,14 +425,13 @@ $gp: "";
 }
 .ghost-subline{
 	text-align: right;
-	color: $light-1;
 	position: relative;
 
 	
 	&.gs-1{
 		font-size: $fs-3;
 		top: $width-main-desk *1.3;
-		left: $mar-3;
+		left: 0;
 		@media screen and (min-width: $tab){
 			font-size: $fs-3;
 			top: $width-half-desk + 14%;	
@@ -371,7 +440,7 @@ $gp: "";
 	&.gs-2{
 		font-size: $fs-5;
 		top: $width-main-desk + 5%;
-		left: $mar-4;
+		left: $mar-1;
 		@media screen and (min-width: $tab){
 			font-size: $fs-5;
 			top: $width-half-desk + 18%;

@@ -7,6 +7,7 @@ C1. Colors
 - C1a. Fonts
 - C1b. Backgrounds
 - C1c. Popular Elements
+- C1d. Opacities
 C2. Mixins
 C3. Font-Sizes and Text Elements
 
@@ -34,3 +35,9 @@ $linkblue: #3311e9;
 $transpa: transparent;
 $visited: #551A8B; 
 
+/* C1d. Opacities */
+$glass: transparent;
+$mist: rgba(255,255,255,0.2);
+$veil: rgba(255,255,255,0.5);
+$milk: rgba(255,255,255,0.8);
+$cotton: rgba(255,255,255,0.92);

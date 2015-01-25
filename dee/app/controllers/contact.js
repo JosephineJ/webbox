@@ -21,7 +21,7 @@ var ContactFormController = Ember.Controller.extend({
 			this.set('messageSent',true);
 			//alert("Sended message");
 			//this.changeButtonText("Yeah!");
-			this.send('changeButtonText','Your message has been sent.');
+			this.send('changeButtonText','Generated e-mail in your mail client.');
 		},
 		changeButtonText: function(buttontext){
 			this.set('contactButtonText',buttontext);
