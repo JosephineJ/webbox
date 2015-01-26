@@ -106,13 +106,15 @@ a{
 	
 }
 a.link{
+	text-decoration: none;
 	&:link{
-		text-decoration: underline;
-		color: $linkblue;
+		/*color: $linkblue;*/
+		color: inherit;
 	}	
 	
 	&:visited, &:hover{
-		color: $visited;
+		/*color: $visited;*/
+		color: $bg-color-4;
 	}
 }
 /*Modificators */

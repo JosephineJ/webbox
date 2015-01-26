@@ -1,40 +1,6 @@
 /*variables*/
 $gp: "";
 
-/* Helper classes */
-/*Margins*/
-@for $num from 1 through 9{	
-	
-	.mt-#{$num}{
-		margin-top: $mar-1 *  $num;
-	}
-	
-}
-/*Colors*/
-.color-1{
-	color: $color-1;
-}
-.color-2{
-	color: $color-2;
-}
-.color-3{
-	color: $color-3;
-}
-.glass{
-	background-color: $glass;
-}
-.mist{
-	background-color: $mist;
-}
-.veil{
-	background-color: $veil;
-}
-.milk{
-	background-color: $milk;
-}
-.cotton{
-	background-color: $cotton;
-}
 
 /* Navigation */
 .top-header{
@@ -249,8 +215,8 @@ a.button, .button{
 		border-color: $light-1;
 		background-color: $milk;
 		
-		p,a{
-		color: $color-1;
+		p{
+			color: $color-1;
 		}
 	}
 }
@@ -558,6 +524,65 @@ a.button, .button{
 
 
 }
+
+.newspage{
+
+	.headline{
+		color: $color-2;
+	}
+	
+	.solidfoot{
+		background-color: $bg-color-1;
+	
+	}
+
+}
+
+/* Helper classes */
+/*Margins*/
+@for $num from 1 through 9{	
+	
+	.mt-#{$num}{
+		margin-top: $mar-1 *  $num;
+	}
+	
+}
+/*Colors*/
+.color-1{
+	color: $color-1;
+}
+.color-2{
+	color: $color-2;
+}
+.color-3{
+	color: $color-3;
+}
+.glass{
+	background-color: $glass;
+}
+.mist{
+	background-color: $mist;
+}
+.veil{
+	background-color: $veil;
+}
+.milk{
+	background-color: $milk;
+}
+.cotton{
+	background-color: $cotton;
+}
+.mist, .veil, .milk, .cotton{
+	
+	p, a{
+		color: $color-1;
+	}
+	
+	.link:hover{
+		color: $bg-color-4;
+	}
+}
+
 
 
 

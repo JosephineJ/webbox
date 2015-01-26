@@ -1,11 +1,16 @@
+<div class="newspage">
 <section class="fullsize glass">
 <div class="center-box row-colrow">
 <div class="part-1">
-<h1 id='title'>Welcome to Dee</h1>
+<h1 id='title' class="headline">Welcome to Dee</h1>
 </div>
 <div class="part-1">
-	<div class="content-box">
-		<p>Tell me more, tell me more....</p>
+	<div class="content-box milk">
+		<p>Dee is a 2015 web comic project illustrating the story of 
+		Joshua who finds himself thrown into a world he would have 
+		never imagined to visit before. Follow him on his journey as
+		soon as the dusk falls:</p>
+		<p class="center">{{#link-to 'comic.intro' class="button"}}Read Comic{{/link-to}}</p>
 	</div>
 </div>
 </div>
@@ -19,13 +24,13 @@
 	<div class="part-1">
 		<div class="content-box">
 			<p>{{short-abstract articleContent}}
-			{{#link-to 'news-item' id}}more{{/link-to}}</p>
+			{{#link-to 'news-item' id class="link"}}more{{/link-to}}</p>
 		</div>
 	</div>
 </div>
 </section>
 {{/each}}
-<section class="fullsize">
+<section class="fullsize solidfoot">
 <div class="center-box row-row">
 <div class="part-1">
 <p class="center">Want to start reading the comic just now? Have a try!</p>
@@ -33,5 +38,6 @@
 </div>
 </div>
 </section>
+</div>
 
 {{outlet}}
