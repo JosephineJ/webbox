@@ -3,39 +3,42 @@
 		<div class="part-1">
 			<h1 id='title'>About</h1>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-				sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+				Hey all, I am JJ, an upcoming front-end developer living in Berlin, Germany
+				who loves drawing and building websites. 
+				On this page you can see my very first personal web project <i>Dusk</i>.
+				<i>Dusk</i> is a comic project started by myself in 2015, which combines modern web technologies
+				with my comic art, finally creating an innovative experience of comic reading.
+				The story for <i>Dusk</i> has been on my mind for some years already, but now finally
+				finds its way to curious readers.			
 			</p>
 			<p><img src="#" alt="Image for about us"/></p>
+			<h2 class="mt-2">About the story of Dusk</h2>
 			<p>
-				Lorem ipsum dolor sit amet, consetetur sadipscing elitr, 
-				sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, 
-				sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. 
-Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. 
-Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod 
-tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. 
-At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren,
-no sea takimata sanctus est Lorem ipsum dolor sit amet.
+				<i>Dusk</i> tells the story of a young graduate student who one day accidentally discovers another
+				world which is very different from our own. Describing his journey through this world, meeting 
+				new characters and hopefully finding his way back home is the main plot of this story. 
+			</p>
+			<h2 class="mt-2">About the web technologies</h2>
+			<p>
+				This page you are reading <i>Dusk</i> on, is built upon the innovative MVC framework <a href="http://emberjs.com/"
+				target="ember" class="link">Ember.js</a>
+				using the command line tool <a href="http://www.ember-cli.com/" target="embercli" class="link">Ember-CLI</a>. 
+				The ongoing modernization of web design and programming languages
+				made the implemenation of a big amount of animations, sliders and other fancy elements on this site possible
+				using mostly <a href="https://developer.mozilla.org/en-US/docs/Web/Guide/HTML/HTML5" target="htmlfive" class="link">HTML5</a>
+				and <a href="https://developer.mozilla.org/en-US/docs/Web/CSS/CSS3" target="cssthree" class="link">CSS3</a> techniques. 
 			</p>
 		</div>
 	</div>
 		<div class="center-box row-colrow">
 		<div class="part-1">
-			<h2 class="center">More Headers...</h2>
+			<h3 class="center">Want to read the comic now?</h3>
 			{{#link-to 'comic.intro' class='button mt-1'}}Read Comic{{/link-to}}
 		</div>
 		<div class="part-1">
 			<div class="content-box">
-				<h3>So many headers...</h3>
-				<p>Content</p>
-				<h3>Too many headers</h3>
-				<p>And I will never read them</p>
+				<h3 class="center">Want to get into contact?</h3>
+				<p>{{#link-to 'contact' class="button"}}Contact me{{/link-to}}</p>
 			</div>
 		</div>
 	</div>

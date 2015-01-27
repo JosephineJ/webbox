@@ -6,10 +6,12 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
+	this.route('teaseme',{path: '/'});
 	//this.route("news", { path: "/" });
-	this.resource('news', { path: '/' }, function() {
+	/*this.resource('news', { path: '/' }, function() {
 		this.route('news', { path: '/news' }); 
-	});
+	});*/
+	this.route('news');
 	this.resource('news-item', {path: '/news/:news_id'});
 	//this.route("comic", { path: "/comic" });
 	this.resource("chars", { path: "/chars" }, function(){
@@ -22,7 +24,6 @@ Router.map(function() {
 		this.route('chapter1');
 		this.route('chapter2');
 	}); 
-	this.route("teaseme");
   this.route('clock');
   this.route('klock');
   this.route('impressum');
