@@ -67,7 +67,7 @@ $gp: "";
 }
 .clipped-down{
 	width: 100%;
-	position: relative;
+	position: fixed;
 }
 .headerview{
 	background-color: transparent;
@@ -109,7 +109,7 @@ $gp: "";
 
 /* Main Parts */
 .wrapper{
-	background-color: $bg-color-4;
+	background-color: $glass;
 }
 .main-section{
 	@include centered;
@@ -179,7 +179,7 @@ $gp: "";
 }
 /* Buttons */
 a.button, .button{
-	color: $color-1;
+	/*color: $color-1;*/
 	width: $mar-2 * 4;
 	display: block;
 	font-size: $fs-2;
@@ -527,13 +527,19 @@ a.button, .button{
 
 .newspage{
 
-	.headline{
-		color: $color-2;
+	background-image: url('/images/braingush-2x.png');
+	background-repeat: no-repeat;
+	background-color: $light-1;
+	background-attachment: fixed;
+	background-position: 10% 7%;
+
+	.headline, .news-title{
+		color: $dark-1;
+		text-shadow: $brad/2 $brad/4 $brad/3 $bg-color-1;
 	}
 	
 	.solidfoot{
-		background-color: $bg-color-1;
-	
+		background-color: $bg-color-2;	
 	}
 
 }
@@ -556,6 +562,9 @@ a.button, .button{
 }
 .color-3{
 	color: $color-3;
+}
+.light-1{
+	color: $light-1
 }
 .glass{
 	background-color: $glass;
