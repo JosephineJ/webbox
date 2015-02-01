@@ -527,11 +527,11 @@ a.button, .button{
 
 .newspage{
 
-	background-image: url('/images/braingush-2x.png');
+	background-image: url('/images/joshawe600.png');
 	background-repeat: no-repeat;
-	background-color: $light-1;
+	background-color: $bg-color-3;
 	background-attachment: fixed;
-	background-position: 10% 7%;
+	background-position: right -100%;
 
 	.headline, .news-title{
 		color: $dark-1;

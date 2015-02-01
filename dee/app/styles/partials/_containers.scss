@@ -49,6 +49,7 @@ C2. Models
 	width: $width-main;
 	@media screen and (min-width: $desk) {	
 		width: $width-main-desk;
+		max-width: $width-max-desk;
 	}
 
 }
