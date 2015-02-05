@@ -9,7 +9,6 @@ var ContactSendFormView = Ember.View.extend({
 	click: function(e){
 		//e.preventDefault();
 		//alert("MyStyle!");
-		console.log("H");
 		this.set('messageSent',true);
 		this.get('controller').send('sendMessage');
 		

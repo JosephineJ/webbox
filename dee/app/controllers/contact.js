@@ -9,7 +9,7 @@ var ContactFormController = Ember.Controller.extend({
 			var link ="";
 			var spamcheck = encodeURI(document.getElementById('spamchecker').value);
 			if (spamcheck === ""){
-				link = "mailto:josephinej.fe.dev@gmail.com" +
+				link = "mailto:info@dusk-comic.com" +
 				"?subject=" + encodeURI(document.getElementById('myname').value) + 
 				" sent a message via Dee: " + encodeURI(document.getElementById('mysubject').value) +
 				"&body=" + encodeURI(document.getElementById('mymessage').value);
