@@ -11,21 +11,39 @@ function arrayToList(arr){
 }
 var myArray = [10,20,30,40];
 print("Input Array to arrayToList function: " + myArray);
-print("New List: " + arrayToList(myArray)); // turn object into string with command line print command
+print("New List: " + JSON.stringify(arrayToList(myArray))); // turn object into string with command line print command
 
 /* List to Array function turns nest set of objects back into an array */
 
 function listToArray(list){
   var arr = [];
-  for (var key in list){
-    print("OUTER list value " + key +  ": " + list["value"]);
-    arr.push(list["value"]);
-    for (var prop in list["rest"]){
-      print("inner list value "  +  ": " + list["rest"]["value"]);
-      arr.push(list["rest"]["value"]);
-    }
-  }
+  for (var node = list; node; node = node.rest){
+	arr.push(node.value);
+	}
   return arr;
 }
 print("Reverse Back to Array: " + listToArray(arrayToList(myArray)));
+
+/* prepend an input value in front of an input list */
+
+function prepend(newval,list){
+	newlist = {value: newval, rest: list};
+	return newlist;
+}
+print("prepend to list: prepend(10, prepend(20, null)");
+print(JSON.stringify(prepend(10, prepend(20, null))));
+
+/* nth return element at nth position in a list or undefined if there is no such */
+function nth(list, pos){
+	var i = 0;
+	for (var node = list; node; node = node.rest){
+		if (i === pos){
+			return node.value;
+		}
+		i += 1;
+	}
+	return undefined;
+}
+print("nth value of a list:");
+print(nth(arrayToList([10,20,30]), 1));
 
