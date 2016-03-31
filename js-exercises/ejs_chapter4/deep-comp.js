@@ -29,7 +29,7 @@ function deepEqual(obj1,obj2){
 }
 print("Do deep comparison:");
 var obj = {here: {is: "an"}, object: 2};
-//print("deepEqual(obj,obj): " + deepEqual(obj,obj));
-//print("deepEqual(obj, ...anotherobj): " + deepEqual(obj, {here: 1, object: 2}));
+print("deepEqual(obj,obj): " + deepEqual(obj,obj));
+print("deepEqual(obj, ...anotherobj): " + deepEqual(obj, {here: 1, object: 2}));
 print("deepEqual(obj, a third obj):" + deepEqual(obj, {here: {is: "an"}, object: 2}));
 //print("deepEqual(obj,3): " + deepEqual(obj,3));
