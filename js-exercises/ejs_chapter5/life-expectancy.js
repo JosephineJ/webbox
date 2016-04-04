@@ -41,10 +41,36 @@ var ancestry = [
 ];
 
 function average(array){
-	function plus(a,b){
-		return a + b;
-	}
-	return array.reduce(plus) / array.length; 
+  function plus(a,b){
+    return a + b;
+  }
+  return array.reduce(plus) / array.length; 
 }
+
+var byCent = {},
+    avg,
+    century;
+
+ancestry.forEach(function(person){
+  century = Math.ceil(person.died / 100);
+  if (byCent[century] === undefined){
+      //byCent[century][0] = person.died;
+      byCent[century] = [];
+      byCent[century].push(person.died - person.born);
+  }
+  else {
+      byCent[century].push(person.died - person.born);
+  }
+});
+
+
+
+for (var cent in byCent){
+  avg = average(byCent[cent]);
+  print(cent + ": " + avg);
+}
+
+print("Century Object: " + JSON.stringify(byCent));
+
 
 
