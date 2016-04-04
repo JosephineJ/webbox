@@ -8,12 +8,11 @@ function every(array, predicate){
 }
 
 function some(array, predicate){
-  array.forEach(function(el){
-    print("some func: " + predicate(el));
-    if (predicate(el)){
+  for (var i = 0; i < array.length; i += 1){
+    if (predicate(array[i])){
       return true;
     }
-  });
+  }
   return false;
 }
 
