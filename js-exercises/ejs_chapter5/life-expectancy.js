@@ -47,30 +47,38 @@ function average(array){
   return array.reduce(plus) / array.length; 
 }
 
-var byCent = {},
-    avg,
-    century;
 
-ancestry.forEach(function(person){
-  century = Math.ceil(person.died / 100);
-  if (byCent[century] === undefined){
-      //byCent[century][0] = person.died;
-      byCent[century] = [];
-      byCent[century].push(person.died - person.born);
+
+var byCentury;
+
+function groupBy(array, groupOf){
+  var groups = {};
+  array.forEach(function(element){
+  groupName = groupOf(element);
+  if (groups[groupName] === undefined){
+    //byCent[century][0] = person.died;
+    groups[groupName] = [element];
   }
   else {
-      byCent[century].push(person.died - person.born);
+    groups[groupName].push(element);
   }
+  });
+  return groups;
+}
+
+byCentury = groupBy(ancestry, function(person){
+  return Math.ceil(person.died / 100);
 });
 
 
-
-for (var cent in byCent){
-  avg = average(byCent[cent]);
-  print(cent + ": " + avg);
+for (var cent in byCentury){
+  var ages = byCentury[cent].map(function(person){
+    return person.died - person.born;
+  });
+  print(cent + ": " + average(ages));
 }
 
-print("Century Object: " + JSON.stringify(byCent));
+//print("Century Object: " + JSON.stringify(byCent));
 
 
 
