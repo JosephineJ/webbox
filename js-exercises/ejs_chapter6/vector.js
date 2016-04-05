@@ -7,12 +7,15 @@ Vector.prototype.plus = function(vx){
     x: this.x + vx.x,
     y: this.y + vx.y
   }
+  // solution from ejs:
+  // return new Vector(this.x + vx.x, this.y + vx.y);
 }
 Vector.prototype.minus = function(vx){
   return {
     x: this.x - vx.x,
     y: this.y - vx.y
   }
+  //return new Vector(this.x - vx.x, this.y - vx.y);
 }
 
 Object.defineProperty(Vector.prototype, "length", {
