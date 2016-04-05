@@ -14,6 +14,13 @@ Vector.prototype.minus = function(vx){
     y: this.y - vx.y
   }
 }
+
+Object.defineProperty(Vector.prototype, "length", {
+  get: function() {
+    return Math.sqrt(this.x * this.x + this.y * this.y); 
+  }
+});
+
 print(JSON.stringify(new Vector(1, 2).plus(new Vector(2, 3))));
 // → Vector{x: 3, y: 5}
 print(JSON.stringify(new Vector(1, 2).minus(new Vector(2, 3))));
