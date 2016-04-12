@@ -296,7 +296,7 @@ Plant.prototype.act = function(view){
   }
 };
 
-function PLantEater(){
+function PlantEater(){
   this.energy = 20;
 }
 PlantEater.prototype.act = function(view){
@@ -320,4 +320,89 @@ PlantEater.prototype.act = function(view){
       direction: space
     };
   }
+};
+
+function SmartPlantEater(){
+  this.energy = 20;
+  this.dir = "s";
+  this.counter = 0;
+  PlantEater.call(this);
+}
+
+SmartPlantEater.prototype = Object.create(PlantEater.prototype);
+
+SmartPlantEater.prototype.act = function(view){
+  var space = view.findAll(" ");
+  var plant = view.find("*");
+  if (this.energy > 120 && space.length >= 4){
+    return {
+      type: "reproduce",
+      direction: space[0]
+    };
+  }
+  if (plant && this.energy < 150 && this.counter >= 4){
+    return {
+      type: "eat",
+      direction: plant
+    };
+  }
+  if (space){
+    var start = this.dir;
+    if (view.look(dirPlus(this.dir, -3)) != " ")
+      start = this.dir = dirPlus(this.dir, -2);
+    if (view.look(dirPlus(this.dir)) == "*"){
+      return {
+        type: "move",
+        direction: this.dir
+      };
+    }
+    while (view.look(this.dir) != " ") {
+      this.dir = dirPlus(this.dir, 1);
+      if (this.dir == start) break;
+    }
+    return {
+      type: "move",
+      direction: this.dir
+    };
+  }
+};
+
+function Tiger() {
+        this.energy = 30;
+        this.direction = "e";
+    this.counter = 0;
+    this.env = "     ".split(" ");
+}
+
+Tiger.prototype.act = function(view){
+  var space = view.find(" ");
+  var tofu = view.find("O");
+  this.counter += 1;
+  if (this.energy >= 120){
+        return {
+      type: "reproduce",
+      direction: space
+    };
+  }
+  if (tofu) {
+        this.env.push("O");
+    this.env.shift();
+    if (this.env.filter(function(x){
+        return x === "O"
+    }).length > 1){
+      return {
+          type: "eat",
+          direction: tofu
+      };
+    }
+  }
+  if (view.look(this.direction) != " " && space){
+    this.env.push("x");
+    this.env.shift();
+    this.direction = space;
+  }
+  return {
+    type: "move",
+    direction: this.direction
+  };
 };
