@@ -2,7 +2,7 @@
   console.log("animation started....");
   var num,
       myScreen = document.getElementsByClassName("animated-frame")
-      tl = new TimelineMax({repeat: 15, repeatDelay: 0});
+      tl = new TimelineMax({repeat: -1, repeatDelay: 0});
 
   // adding the frames to the Timeline
   // initialise with first screen without any delay
